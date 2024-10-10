@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "m1jnwAyy7+I=",
+  "dgSpecHash": "XODM/jGpLdo=",
   "success": true,
-  "projectFilePath": "C:\\Users\\Miguel\\Desktop\\practicas-csharp\\04 -demo-clean-architecture\\3-InterfaceAdapters-Repository\\3-InterfaceAdapters-Repository.csproj",
+  "projectFilePath": "C:\\Users\\Miguel\\Desktop\\csharp-clean-architecture-demo\\3-InterfaceAdapters-Repository\\3-InterfaceAdapters-Repository.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Miguel\\.nuget\\packages\\bouncycastle.cryptography\\2.3.1\\bouncycastle.cryptography.2.3.1.nupkg.sha512",
     "C:\\Users\\Miguel\\.nuget\\packages\\google.protobuf\\3.26.1\\google.protobuf.3.26.1.nupkg.sha512",

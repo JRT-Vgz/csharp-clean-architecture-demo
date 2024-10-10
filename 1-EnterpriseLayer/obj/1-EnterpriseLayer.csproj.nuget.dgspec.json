@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Miguel\\Desktop\\practicas-csharp\\04 -demo-clean-architecture\\1-EnterpriseLayer\\1-EnterpriseLayer.csproj": {}
+    "C:\\Users\\Miguel\\Desktop\\csharp-clean-architecture-demo\\1-EnterpriseLayer\\1-EnterpriseLayer.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Miguel\\Desktop\\practicas-csharp\\04 -demo-clean-architecture\\1-EnterpriseLayer\\1-EnterpriseLayer.csproj": {
+    "C:\\Users\\Miguel\\Desktop\\csharp-clean-architecture-demo\\1-EnterpriseLayer\\1-EnterpriseLayer.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Miguel\\Desktop\\practicas-csharp\\04 -demo-clean-architecture\\1-EnterpriseLayer\\1-EnterpriseLayer.csproj",
+        "projectUniqueName": "C:\\Users\\Miguel\\Desktop\\csharp-clean-architecture-demo\\1-EnterpriseLayer\\1-EnterpriseLayer.csproj",
         "projectName": "1-EnterpriseLayer",
-        "projectPath": "C:\\Users\\Miguel\\Desktop\\practicas-csharp\\04 -demo-clean-architecture\\1-EnterpriseLayer\\1-EnterpriseLayer.csproj",
+        "projectPath": "C:\\Users\\Miguel\\Desktop\\csharp-clean-architecture-demo\\1-EnterpriseLayer\\1-EnterpriseLayer.csproj",
         "packagesPath": "C:\\Users\\Miguel\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Miguel\\Desktop\\practicas-csharp\\04 -demo-clean-architecture\\1-EnterpriseLayer\\obj\\",
+        "outputPath": "C:\\Users\\Miguel\\Desktop\\csharp-clean-architecture-demo\\1-EnterpriseLayer\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Miguel\\AppData\\Roaming\\NuGet\\NuGet.Config",

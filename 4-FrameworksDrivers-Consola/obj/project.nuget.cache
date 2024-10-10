@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "45LZHGOTAkE=",
+  "dgSpecHash": "nsgu2O7O2v4=",
   "success": true,
-  "projectFilePath": "C:\\Users\\Miguel\\Desktop\\practicas-csharp\\04 -demo-clean-architecture\\4-FrameworksDrivers-Consola\\4-FrameworksDrivers-Consola.csproj",
+  "projectFilePath": "C:\\Users\\Miguel\\Desktop\\csharp-clean-architecture-demo\\4-FrameworksDrivers-Consola\\4-FrameworksDrivers-Consola.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Miguel\\.nuget\\packages\\bouncycastle.cryptography\\2.3.1\\bouncycastle.cryptography.2.3.1.nupkg.sha512",
     "C:\\Users\\Miguel\\.nuget\\packages\\google.protobuf\\3.26.1\\google.protobuf.3.26.1.nupkg.sha512",

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "giOmgJ+7Bas=",
+  "dgSpecHash": "a7zY+rsYyzA=",
   "success": true,
-  "projectFilePath": "C:\\Users\\Miguel\\Desktop\\practicas-csharp\\04 -demo-clean-architecture\\4-FrameworksDrivers-API\\4-FrameworksDrivers-API.csproj",
+  "projectFilePath": "C:\\Users\\Miguel\\Desktop\\csharp-clean-architecture-demo\\4-FrameworksDrivers-API\\4-FrameworksDrivers-API.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Miguel\\.nuget\\packages\\bouncycastle.cryptography\\2.3.1\\bouncycastle.cryptography.2.3.1.nupkg.sha512",
     "C:\\Users\\Miguel\\.nuget\\packages\\fluentvalidation\\11.10.0\\fluentvalidation.11.10.0.nupkg.sha512",

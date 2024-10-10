@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "jA2XLQzqBTw=",
+  "dgSpecHash": "t9SIljOjK3k=",
   "success": true,
-  "projectFilePath": "C:\\Users\\Miguel\\Desktop\\practicas-csharp\\04 -demo-clean-architecture\\1-EnterpriseLayer\\1-EnterpriseLayer.csproj",
+  "projectFilePath": "C:\\Users\\Miguel\\Desktop\\csharp-clean-architecture-demo\\1-EnterpriseLayer\\1-EnterpriseLayer.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

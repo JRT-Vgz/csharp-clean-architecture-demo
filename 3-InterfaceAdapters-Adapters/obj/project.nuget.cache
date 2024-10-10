@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "qerka2OP6BI=",
+  "dgSpecHash": "/qdXEYePyoU=",
   "success": true,
-  "projectFilePath": "C:\\Users\\Miguel\\Desktop\\practicas-csharp\\04 -demo-clean-architecture\\3-InterfaceAdapters-Adapters\\3-InterfaceAdapters-Adapters.csproj",
+  "projectFilePath": "C:\\Users\\Miguel\\Desktop\\csharp-clean-architecture-demo\\3-InterfaceAdapters-Adapters\\3-InterfaceAdapters-Adapters.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }
