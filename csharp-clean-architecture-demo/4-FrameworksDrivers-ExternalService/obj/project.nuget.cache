@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "sm3DQlIU+Jc=",
+  "dgSpecHash": "IrWBpcV0+bg=",
   "success": true,
-  "projectFilePath": "C:\\Users\\Miguel\\Desktop\\csharp-clean-architecture-demo\\4-FrameworksDrivers-ExternalService\\4-FrameworksDrivers-ExternalService.csproj",
+  "projectFilePath": "C:\\Users\\Miguel\\Desktop\\csharp-clean-architecture-demo\\csharp-clean-architecture-demo\\4-FrameworksDrivers-ExternalService\\4-FrameworksDrivers-ExternalService.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

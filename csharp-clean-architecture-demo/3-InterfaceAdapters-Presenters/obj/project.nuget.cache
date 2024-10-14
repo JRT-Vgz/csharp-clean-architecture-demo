@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "+P1Oi1N4F28=",
+  "dgSpecHash": "u5Pn3pKsV8U=",
   "success": true,
-  "projectFilePath": "C:\\Users\\Miguel\\Desktop\\csharp-clean-architecture-demo\\3-InterfaceAdapters-Presenters\\3-InterfaceAdapters-Presenters.csproj",
+  "projectFilePath": "C:\\Users\\Miguel\\Desktop\\csharp-clean-architecture-demo\\csharp-clean-architecture-demo\\3-InterfaceAdapters-Presenters\\3-InterfaceAdapters-Presenters.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

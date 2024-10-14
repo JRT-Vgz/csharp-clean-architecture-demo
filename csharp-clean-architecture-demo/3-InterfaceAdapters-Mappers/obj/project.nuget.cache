@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "3FLAEP3ECUM=",
+  "dgSpecHash": "04nMxsZGPGc=",
   "success": true,
-  "projectFilePath": "C:\\Users\\Miguel\\Desktop\\csharp-clean-architecture-demo\\3-InterfaceAdapters-Mappers\\3-InterfaceAdapters-Mappers.csproj",
+  "projectFilePath": "C:\\Users\\Miguel\\Desktop\\csharp-clean-architecture-demo\\csharp-clean-architecture-demo\\3-InterfaceAdapters-Mappers\\3-InterfaceAdapters-Mappers.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

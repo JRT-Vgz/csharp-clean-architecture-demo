@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Miguel\\Desktop\\csharp-clean-architecture-demo\\3-InterfaceAdapters-Models\\3-InterfaceAdapters-Models.csproj",
+      "projectUniqueName": "C:\\Users\\Miguel\\Desktop\\csharp-clean-architecture-demo\\csharp-clean-architecture-demo\\3-InterfaceAdapters-Models\\3-InterfaceAdapters-Models.csproj",
       "projectName": "3-InterfaceAdapters-Models",
-      "projectPath": "C:\\Users\\Miguel\\Desktop\\csharp-clean-architecture-demo\\3-InterfaceAdapters-Models\\3-InterfaceAdapters-Models.csproj",
+      "projectPath": "C:\\Users\\Miguel\\Desktop\\csharp-clean-architecture-demo\\csharp-clean-architecture-demo\\3-InterfaceAdapters-Models\\3-InterfaceAdapters-Models.csproj",
       "packagesPath": "C:\\Users\\Miguel\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Miguel\\Desktop\\csharp-clean-architecture-demo\\3-InterfaceAdapters-Models\\obj\\",
+      "outputPath": "C:\\Users\\Miguel\\Desktop\\csharp-clean-architecture-demo\\csharp-clean-architecture-demo\\3-InterfaceAdapters-Models\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Miguel\\AppData\\Roaming\\NuGet\\NuGet.Config",

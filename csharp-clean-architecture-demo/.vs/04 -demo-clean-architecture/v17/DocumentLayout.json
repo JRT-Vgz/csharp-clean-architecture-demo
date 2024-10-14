@@ -1,13 +1,13 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\Miguel\\Desktop\\csharp-clean-architecture-demo\\",
+  "WorkspaceRootPath": "C:\\Users\\Miguel\\Desktop\\csharp-clean-architecture-demo\\csharp-clean-architecture-demo\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A84DD723-E0B6-46FE-81E1-B86ED1DFD4E2}|4-FrameworksDrivers-API\\4-FrameworksDrivers-API.csproj|c:\\users\\miguel\\desktop\\csharp-clean-architecture-demo\\4-frameworksdrivers-api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "AbsoluteMoniker": "D:0:0:{A84DD723-E0B6-46FE-81E1-B86ED1DFD4E2}|4-FrameworksDrivers-API\\4-FrameworksDrivers-API.csproj|c:\\users\\miguel\\desktop\\csharp-clean-architecture-demo\\csharp-clean-architecture-demo\\4-frameworksdrivers-api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
       "RelativeMoniker": "D:0:0:{A84DD723-E0B6-46FE-81E1-B86ED1DFD4E2}|4-FrameworksDrivers-API\\4-FrameworksDrivers-API.csproj|solutionrelative:4-frameworksdrivers-api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{34AE6371-8D29-4523-BB15-23976C23D03A}|4-FrameworksDrivers-Consola\\4-FrameworksDrivers-Consola.csproj|c:\\users\\miguel\\desktop\\csharp-clean-architecture-demo\\4-frameworksdrivers-consola\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "AbsoluteMoniker": "D:0:0:{34AE6371-8D29-4523-BB15-23976C23D03A}|4-FrameworksDrivers-Consola\\4-FrameworksDrivers-Consola.csproj|c:\\users\\miguel\\desktop\\csharp-clean-architecture-demo\\csharp-clean-architecture-demo\\4-frameworksdrivers-consola\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
       "RelativeMoniker": "D:0:0:{34AE6371-8D29-4523-BB15-23976C23D03A}|4-FrameworksDrivers-Consola\\4-FrameworksDrivers-Consola.csproj|solutionrelative:4-frameworksdrivers-consola\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     }
   ],
@@ -24,9 +24,9 @@
               "$type": "Document",
               "DocumentIndex": 1,
               "Title": "appsettings.json",
-              "DocumentMoniker": "C:\\Users\\Miguel\\Desktop\\csharp-clean-architecture-demo\\4-FrameworksDrivers-Consola\\appsettings.json",
+              "DocumentMoniker": "C:\\Users\\Miguel\\Desktop\\csharp-clean-architecture-demo\\csharp-clean-architecture-demo\\4-FrameworksDrivers-Consola\\appsettings.json",
               "RelativeDocumentMoniker": "4-FrameworksDrivers-Consola\\appsettings.json",
-              "ToolTip": "C:\\Users\\Miguel\\Desktop\\csharp-clean-architecture-demo\\4-FrameworksDrivers-Consola\\appsettings.json",
+              "ToolTip": "C:\\Users\\Miguel\\Desktop\\csharp-clean-architecture-demo\\csharp-clean-architecture-demo\\4-FrameworksDrivers-Consola\\appsettings.json",
               "RelativeToolTip": "4-FrameworksDrivers-Consola\\appsettings.json",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAUAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
@@ -37,11 +37,11 @@
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "appsettings.json",
-              "DocumentMoniker": "C:\\Users\\Miguel\\Desktop\\csharp-clean-architecture-demo\\4-FrameworksDrivers-API\\appsettings.json",
+              "DocumentMoniker": "C:\\Users\\Miguel\\Desktop\\csharp-clean-architecture-demo\\csharp-clean-architecture-demo\\4-FrameworksDrivers-API\\appsettings.json",
               "RelativeDocumentMoniker": "4-FrameworksDrivers-API\\appsettings.json",
-              "ToolTip": "C:\\Users\\Miguel\\Desktop\\csharp-clean-architecture-demo\\4-FrameworksDrivers-API\\appsettings.json",
+              "ToolTip": "C:\\Users\\Miguel\\Desktop\\csharp-clean-architecture-demo\\csharp-clean-architecture-demo\\4-FrameworksDrivers-API\\appsettings.json",
               "RelativeToolTip": "4-FrameworksDrivers-API\\appsettings.json",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAA/AAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAABCAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
               "WhenOpened": "2024-10-10T16:47:50.955Z",
               "EditorCaption": ""

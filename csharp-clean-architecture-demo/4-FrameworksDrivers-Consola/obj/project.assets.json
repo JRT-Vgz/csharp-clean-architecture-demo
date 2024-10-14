@@ -2693,11 +2693,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Miguel\\Desktop\\csharp-clean-architecture-demo\\4-FrameworksDrivers-Consola\\4-FrameworksDrivers-Consola.csproj",
+      "projectUniqueName": "C:\\Users\\Miguel\\Desktop\\csharp-clean-architecture-demo\\csharp-clean-architecture-demo\\4-FrameworksDrivers-Consola\\4-FrameworksDrivers-Consola.csproj",
       "projectName": "4-FrameworksDrivers-Consola",
-      "projectPath": "C:\\Users\\Miguel\\Desktop\\csharp-clean-architecture-demo\\4-FrameworksDrivers-Consola\\4-FrameworksDrivers-Consola.csproj",
+      "projectPath": "C:\\Users\\Miguel\\Desktop\\csharp-clean-architecture-demo\\csharp-clean-architecture-demo\\4-FrameworksDrivers-Consola\\4-FrameworksDrivers-Consola.csproj",
       "packagesPath": "C:\\Users\\Miguel\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Miguel\\Desktop\\csharp-clean-architecture-demo\\4-FrameworksDrivers-Consola\\obj\\",
+      "outputPath": "C:\\Users\\Miguel\\Desktop\\csharp-clean-architecture-demo\\csharp-clean-architecture-demo\\4-FrameworksDrivers-Consola\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Miguel\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -2715,23 +2715,23 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "C:\\Users\\Miguel\\Desktop\\csharp-clean-architecture-demo\\1-EnterpriseLayer\\1-EnterpriseLayer.csproj": {
-              "projectPath": "C:\\Users\\Miguel\\Desktop\\csharp-clean-architecture-demo\\1-EnterpriseLayer\\1-EnterpriseLayer.csproj"
+            "C:\\Users\\Miguel\\Desktop\\csharp-clean-architecture-demo\\csharp-clean-architecture-demo\\1-EnterpriseLayer\\1-EnterpriseLayer.csproj": {
+              "projectPath": "C:\\Users\\Miguel\\Desktop\\csharp-clean-architecture-demo\\csharp-clean-architecture-demo\\1-EnterpriseLayer\\1-EnterpriseLayer.csproj"
             },
-            "C:\\Users\\Miguel\\Desktop\\csharp-clean-architecture-demo\\2-ApplicationLayer\\2-ApplicationLayer.csproj": {
-              "projectPath": "C:\\Users\\Miguel\\Desktop\\csharp-clean-architecture-demo\\2-ApplicationLayer\\2-ApplicationLayer.csproj"
+            "C:\\Users\\Miguel\\Desktop\\csharp-clean-architecture-demo\\csharp-clean-architecture-demo\\2-ApplicationLayer\\2-ApplicationLayer.csproj": {
+              "projectPath": "C:\\Users\\Miguel\\Desktop\\csharp-clean-architecture-demo\\csharp-clean-architecture-demo\\2-ApplicationLayer\\2-ApplicationLayer.csproj"
             },
-            "C:\\Users\\Miguel\\Desktop\\csharp-clean-architecture-demo\\3-InterfaceAdapters-Data\\3-InterfaceAdapters-Data.csproj": {
-              "projectPath": "C:\\Users\\Miguel\\Desktop\\csharp-clean-architecture-demo\\3-InterfaceAdapters-Data\\3-InterfaceAdapters-Data.csproj"
+            "C:\\Users\\Miguel\\Desktop\\csharp-clean-architecture-demo\\csharp-clean-architecture-demo\\3-InterfaceAdapters-Data\\3-InterfaceAdapters-Data.csproj": {
+              "projectPath": "C:\\Users\\Miguel\\Desktop\\csharp-clean-architecture-demo\\csharp-clean-architecture-demo\\3-InterfaceAdapters-Data\\3-InterfaceAdapters-Data.csproj"
             },
-            "C:\\Users\\Miguel\\Desktop\\csharp-clean-architecture-demo\\3-InterfaceAdapters-Models\\3-InterfaceAdapters-Models.csproj": {
-              "projectPath": "C:\\Users\\Miguel\\Desktop\\csharp-clean-architecture-demo\\3-InterfaceAdapters-Models\\3-InterfaceAdapters-Models.csproj"
+            "C:\\Users\\Miguel\\Desktop\\csharp-clean-architecture-demo\\csharp-clean-architecture-demo\\3-InterfaceAdapters-Models\\3-InterfaceAdapters-Models.csproj": {
+              "projectPath": "C:\\Users\\Miguel\\Desktop\\csharp-clean-architecture-demo\\csharp-clean-architecture-demo\\3-InterfaceAdapters-Models\\3-InterfaceAdapters-Models.csproj"
             },
-            "C:\\Users\\Miguel\\Desktop\\csharp-clean-architecture-demo\\3-InterfaceAdapters-Presenters\\3-InterfaceAdapters-Presenters.csproj": {
-              "projectPath": "C:\\Users\\Miguel\\Desktop\\csharp-clean-architecture-demo\\3-InterfaceAdapters-Presenters\\3-InterfaceAdapters-Presenters.csproj"
+            "C:\\Users\\Miguel\\Desktop\\csharp-clean-architecture-demo\\csharp-clean-architecture-demo\\3-InterfaceAdapters-Presenters\\3-InterfaceAdapters-Presenters.csproj": {
+              "projectPath": "C:\\Users\\Miguel\\Desktop\\csharp-clean-architecture-demo\\csharp-clean-architecture-demo\\3-InterfaceAdapters-Presenters\\3-InterfaceAdapters-Presenters.csproj"
             },
-            "C:\\Users\\Miguel\\Desktop\\csharp-clean-architecture-demo\\3-InterfaceAdapters-Repository\\3-InterfaceAdapters-Repository.csproj": {
-              "projectPath": "C:\\Users\\Miguel\\Desktop\\csharp-clean-architecture-demo\\3-InterfaceAdapters-Repository\\3-InterfaceAdapters-Repository.csproj"
+            "C:\\Users\\Miguel\\Desktop\\csharp-clean-architecture-demo\\csharp-clean-architecture-demo\\3-InterfaceAdapters-Repository\\3-InterfaceAdapters-Repository.csproj": {
+              "projectPath": "C:\\Users\\Miguel\\Desktop\\csharp-clean-architecture-demo\\csharp-clean-architecture-demo\\3-InterfaceAdapters-Repository\\3-InterfaceAdapters-Repository.csproj"
             }
           }
         }
