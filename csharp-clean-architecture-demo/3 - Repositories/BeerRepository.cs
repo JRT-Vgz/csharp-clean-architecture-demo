@@ -2,6 +2,7 @@
 using _2___Services.Interfaces;
 using _3___Data;
 using _3___Data.Models;
+using AutoMapper;
 using Microsoft.EntityFrameworkCore;
 
 namespace _3___Repositories
@@ -9,60 +10,37 @@ namespace _3___Repositories
     public class BeerRepository : IRepository<BeerEntity>
     {
         private readonly BreweryContext _breweryContext;
-        public BeerRepository(BreweryContext breweryContext)
+        private readonly IMapper _mapper;
+        public BeerRepository(BreweryContext breweryContext,
+            IMapper mapper)
         {
             _breweryContext = breweryContext;
+            _mapper = mapper;
         }
 
         public async Task<IEnumerable<BeerEntity>> GetAllAsync()
         {
             var beerModels = await _breweryContext.Beers.Include("Brand").ToListAsync();
 
-            return beerModels.Select(b => new BeerEntity
-            {
-                Id = b.Id,
-                Name = b.Name,
-                BrandName = b.Brand.Name,
-                Alcohol = b.Alcohol
-            });
+            return beerModels.Select(b => _mapper.Map<BeerEntity>(b));
         }
 
         public async Task<BeerEntity> GetByIdAsync(int id)
         {
             var beerModel = await _breweryContext.Beers.Include("Brand").FirstOrDefaultAsync(b => b.Id == id);
 
-            return new BeerEntity
-            {
-                Id = beerModel.Id,
-                Name = beerModel.Name,
-                BrandName = beerModel.Brand.Name,
-                Alcohol = beerModel.Alcohol
-            };
+            return _mapper.Map<BeerEntity>(beerModel);
         }
 
         public async Task<BeerEntity> AddAsync(BeerEntity beerEntity)
         {
-            var brand = await _breweryContext.Brands.FindAsync(beerEntity.IdBrand);
-
-            var beerModel = new BeerModel
-            {
-                Name = beerEntity.Name,
-                IdBrand = beerEntity.IdBrand,
-                Alcohol = beerEntity.Alcohol,
-                Brand = brand
-            };
+            await _breweryContext.Brands.FindAsync(beerEntity.IdBrand);
+            var beerModel = _mapper.Map<BeerModel>(beerEntity);
 
             await _breweryContext.Beers.AddAsync(beerModel);
             await _breweryContext.SaveChangesAsync();
 
-            return new BeerEntity
-            {
-                Id = beerModel.Id,
-                Name = beerModel.Name,
-                IdBrand = beerModel.IdBrand,
-                BrandName = beerModel.Brand.Name,
-                Alcohol = beerModel.Alcohol
-            };
+            return _mapper.Map<BeerEntity>(beerModel);
 
         }
 

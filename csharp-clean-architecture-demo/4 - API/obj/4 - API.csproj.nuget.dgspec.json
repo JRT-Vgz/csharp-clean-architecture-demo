@@ -110,6 +110,12 @@
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
+          "dependencies": {
+            "AutoMapper": {
+              "target": "Package",
+              "version": "[12.0.1, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
@@ -233,6 +239,9 @@
               },
               "C:\\Users\\Miguel\\Desktop\\csharp-clean-architecture-demo\\csharp-clean-architecture-demo\\2 - Services\\2 - Services.csproj": {
                 "projectPath": "C:\\Users\\Miguel\\Desktop\\csharp-clean-architecture-demo\\csharp-clean-architecture-demo\\2 - Services\\2 - Services.csproj"
+              },
+              "C:\\Users\\Miguel\\Desktop\\csharp-clean-architecture-demo\\csharp-clean-architecture-demo\\3 - Data\\3 - Data.csproj": {
+                "projectPath": "C:\\Users\\Miguel\\Desktop\\csharp-clean-architecture-demo\\csharp-clean-architecture-demo\\3 - Data\\3 - Data.csproj"
               }
             }
           }

@@ -1,5 +1,6 @@
 using _1___Entities;
 using _2___Services.Interfaces;
+using AutoMapper;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,25 +12,23 @@ namespace _2___Services.BeerService
     public class AddBeerUseCase<TInsertDto, TDto>
     {
         private readonly IRepository<BeerEntity> _beerRepository;
-        private readonly IMapper<TInsertDto, BeerEntity> _insertDtoMapper;
-        private readonly IMapper<BeerEntity, TDto> _entityMapper;
+        private readonly IMapper _mapper;
 
         public AddBeerUseCase(IRepository<BeerEntity> beerRepository, 
-            IMapper<TInsertDto, BeerEntity> insertDtoMapper,
-            IMapper<BeerEntity, TDto> entityMapper)
+            IMapper mapper)
+
         {
             _beerRepository = beerRepository;
-            _insertDtoMapper = insertDtoMapper;
-            _entityMapper = entityMapper;
+            _mapper = mapper;
         }
 
         public async Task<TDto> ExecuteAsync(TInsertDto beerInsertDto)
         {
-            var beerEntity = _insertDtoMapper.Map(beerInsertDto);
+            var beerEntity = _mapper.Map<BeerEntity>(beerInsertDto);
 
             beerEntity = await _beerRepository.AddAsync(beerEntity);
 
-            var beerDto = _entityMapper.Map(beerEntity);
+            var beerDto = _mapper.Map<TDto>(beerEntity);
             return beerDto;
         }
     }

@@ -1,8 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "jX7CgijcmNY=",
+  "dgSpecHash": "jc70+LJDpbI=",
   "success": true,
   "projectFilePath": "C:\\Users\\Miguel\\Desktop\\csharp-clean-architecture-demo\\csharp-clean-architecture-demo\\3 - Presenters\\3 - Presenters.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\Miguel\\.nuget\\packages\\automapper\\12.0.1\\automapper.12.0.1.nupkg.sha512",
+    "C:\\Users\\Miguel\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512"
+  ],
   "logs": []
 }

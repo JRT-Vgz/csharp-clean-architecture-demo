@@ -3,8 +3,16 @@
   "WorkspaceRootPath": "C:\\Users\\Miguel\\Desktop\\csharp-clean-architecture-demo\\csharp-clean-architecture-demo\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{AF3046CA-F17B-45C2-965A-A0DF44579ECC}|2 - Services\\2 - Services.csproj|c:\\users\\miguel\\desktop\\csharp-clean-architecture-demo\\csharp-clean-architecture-demo\\2 - services\\beerservice\\addbeerusecase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{AF3046CA-F17B-45C2-965A-A0DF44579ECC}|2 - Services\\2 - Services.csproj|solutionrelative:2 - services\\beerservice\\addbeerusecase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{95C439B9-21EB-408C-806D-6C5EE26EE278}|3 - Repositories\\3 - Repositories.csproj|c:\\users\\miguel\\desktop\\csharp-clean-architecture-demo\\csharp-clean-architecture-demo\\3 - repositories\\beerrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{95C439B9-21EB-408C-806D-6C5EE26EE278}|3 - Repositories\\3 - Repositories.csproj|solutionrelative:3 - repositories\\beerrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BE8E0F5D-5C96-4FF2-B337-7DA97DC58026}|4 - API\\4 - API.csproj|c:\\users\\miguel\\desktop\\csharp-clean-architecture-demo\\csharp-clean-architecture-demo\\4 - api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BE8E0F5D-5C96-4FF2-B337-7DA97DC58026}|4 - API\\4 - API.csproj|solutionrelative:4 - api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{365E1803-93C7-4D36-B425-5753378E4C2E}|3 - Mappers\\3 - Mappers.csproj|c:\\users\\miguel\\desktop\\csharp-clean-architecture-demo\\csharp-clean-architecture-demo\\3 - mappers\\beermappingprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{365E1803-93C7-4D36-B425-5753378E4C2E}|3 - Mappers\\3 - Mappers.csproj|solutionrelative:3 - mappers\\beermappingprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -14,24 +22,50 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 1,
           "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "AddBeerUseCase.cs",
-              "DocumentMoniker": "C:\\Users\\Miguel\\Desktop\\csharp-clean-architecture-demo\\csharp-clean-architecture-demo\\2 - Services\\BeerService\\AddBeerUseCase.cs",
-              "RelativeDocumentMoniker": "2 - Services\\BeerService\\AddBeerUseCase.cs",
-              "ToolTip": "C:\\Users\\Miguel\\Desktop\\csharp-clean-architecture-demo\\csharp-clean-architecture-demo\\2 - Services\\BeerService\\AddBeerUseCase.cs",
-              "RelativeToolTip": "2 - Services\\BeerService\\AddBeerUseCase.cs",
-              "ViewState": "AQIAAAMAAAAAAAAAAAAAABYAAAApAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-22T17:00:10.622Z",
-              "EditorCaption": ""
-            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "BeerRepository.cs",
+              "DocumentMoniker": "C:\\Users\\Miguel\\Desktop\\csharp-clean-architecture-demo\\csharp-clean-architecture-demo\\3 - Repositories\\BeerRepository.cs",
+              "RelativeDocumentMoniker": "3 - Repositories\\BeerRepository.cs",
+              "ToolTip": "C:\\Users\\Miguel\\Desktop\\csharp-clean-architecture-demo\\csharp-clean-architecture-demo\\3 - Repositories\\BeerRepository.cs",
+              "RelativeToolTip": "3 - Repositories\\BeerRepository.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABMAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-22T17:18:23.899Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "BeerMappingProfile.cs",
+              "DocumentMoniker": "C:\\Users\\Miguel\\Desktop\\csharp-clean-architecture-demo\\csharp-clean-architecture-demo\\3 - Mappers\\BeerMappingProfile.cs",
+              "RelativeDocumentMoniker": "3 - Mappers\\BeerMappingProfile.cs",
+              "ToolTip": "C:\\Users\\Miguel\\Desktop\\csharp-clean-architecture-demo\\csharp-clean-architecture-demo\\3 - Mappers\\BeerMappingProfile.cs",
+              "RelativeToolTip": "3 - Mappers\\BeerMappingProfile.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABMAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-22T17:07:19.277Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\Miguel\\Desktop\\csharp-clean-architecture-demo\\csharp-clean-architecture-demo\\4 - API\\Program.cs",
+              "RelativeDocumentMoniker": "4 - API\\Program.cs",
+              "ToolTip": "C:\\Users\\Miguel\\Desktop\\csharp-clean-architecture-demo\\csharp-clean-architecture-demo\\4 - API\\Program.cs",
+              "RelativeToolTip": "4 - API\\Program.cs",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAABAAAAAhAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-22T17:06:37.442Z",
+              "EditorCaption": ""
             }
           ]
         }

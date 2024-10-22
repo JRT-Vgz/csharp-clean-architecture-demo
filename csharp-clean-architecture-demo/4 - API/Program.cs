@@ -2,7 +2,7 @@ using _1___Entities;
 using _2___Services.BeerService;
 using _2___Services.Interfaces;
 using _3___Data;
-using _3___Mappers.BeerMappers;
+using _3___Mappers;
 using _3___Mappers.Dtos.BeerDtos;
 using _3___Presenters;
 using _3___Presenters.ViewModels;
@@ -24,11 +24,12 @@ builder.Services.AddDbContext<BreweryContext>(options =>
     options.UseMySQL(builder.Configuration.GetConnectionString("BreweryConnection"));
 });
 
+// AUTOMAPPERS
+builder.Services.AddAutoMapper(typeof(BeerMappingProfile));
+
 // BEER ENTITY DEPENDENCIES
 builder.Services.AddScoped<IRepository<BeerEntity>, BeerRepository>();
 builder.Services.AddScoped<IPresenter<BeerEntity, BeerViewModel>, BeerPresenter>();
-builder.Services.AddScoped<IMapper<BeerInsertDto, BeerEntity>, BeerInsertDtoToEntityMapper>();
-builder.Services.AddScoped<IMapper<BeerEntity, BeerDto>, BeerDtoMapper>();
 
 builder.Services.AddScoped<GetAllBeerUseCase<BeerViewModel>>();
 builder.Services.AddScoped<GetBeerByIdUseCase<BeerViewModel>>();

@@ -16,3 +16,5 @@ C:\Users\Miguel\Desktop\csharp-clean-architecture-demo\csharp-clean-architecture
 C:\Users\Miguel\Desktop\csharp-clean-architecture-demo\csharp-clean-architecture-demo\3 - Mappers\obj\Debug\net8.0\refint\3 - Mappers.dll
 C:\Users\Miguel\Desktop\csharp-clean-architecture-demo\csharp-clean-architecture-demo\3 - Mappers\obj\Debug\net8.0\3 - Mappers.pdb
 C:\Users\Miguel\Desktop\csharp-clean-architecture-demo\csharp-clean-architecture-demo\3 - Mappers\obj\Debug\net8.0\ref\3 - Mappers.dll
+C:\Users\Miguel\Desktop\csharp-clean-architecture-demo\csharp-clean-architecture-demo\3 - Mappers\bin\Debug\net8.0\3 - Data.dll
+C:\Users\Miguel\Desktop\csharp-clean-architecture-demo\csharp-clean-architecture-demo\3 - Mappers\bin\Debug\net8.0\3 - Data.pdb
