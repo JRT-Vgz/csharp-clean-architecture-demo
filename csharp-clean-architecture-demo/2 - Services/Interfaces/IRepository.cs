@@ -13,6 +13,5 @@ namespace _2___Services.Interfaces
         Task<TEntity> AddAsync(TEntity entity);
         TEntity UpdateAsync(TEntity entity);
         TEntity DeleteAsync(int id);
-        Task SaveAsync();
     }
 }

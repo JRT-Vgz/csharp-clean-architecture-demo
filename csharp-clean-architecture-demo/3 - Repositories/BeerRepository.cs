@@ -1,6 +1,7 @@
 ﻿using _1___Entities;
 using _2___Services.Interfaces;
 using _3___Data;
+using _3___Data.Models;
 using Microsoft.EntityFrameworkCore;
 
 namespace _3___Repositories
@@ -28,12 +29,41 @@ namespace _3___Repositories
 
         public async Task<BeerEntity> GetByIdAsync(int id)
         {
-            throw new NotImplementedException();
+            var beerModel = await _breweryContext.Beers.Include("Brand").FirstOrDefaultAsync(b => b.Id == id);
+
+            return new BeerEntity
+            {
+                Id = beerModel.Id,
+                Name = beerModel.Name,
+                BrandName = beerModel.Brand.Name,
+                Alcohol = beerModel.Alcohol
+            };
         }
 
-        public async Task<BeerEntity> AddAsync(BeerEntity entity)
+        public async Task<BeerEntity> AddAsync(BeerEntity beerEntity)
         {
-            throw new NotImplementedException();
+            var brand = await _breweryContext.Brands.FindAsync(beerEntity.IdBrand);
+
+            var beerModel = new BeerModel
+            {
+                Name = beerEntity.Name,
+                IdBrand = beerEntity.IdBrand,
+                Alcohol = beerEntity.Alcohol,
+                Brand = brand
+            };
+
+            await _breweryContext.Beers.AddAsync(beerModel);
+            await _breweryContext.SaveChangesAsync();
+
+            return new BeerEntity
+            {
+                Id = beerModel.Id,
+                Name = beerModel.Name,
+                IdBrand = beerModel.IdBrand,
+                BrandName = beerModel.Brand.Name,
+                Alcohol = beerModel.Alcohol
+            };
+
         }
 
         public BeerEntity UpdateAsync(BeerEntity entity)
@@ -42,11 +72,6 @@ namespace _3___Repositories
         }
 
         public BeerEntity DeleteAsync(int id)
-        {
-            throw new NotImplementedException();
-        }
-
-        public Task SaveAsync()
         {
             throw new NotImplementedException();
         }

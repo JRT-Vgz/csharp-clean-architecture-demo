@@ -8,15 +8,22 @@ using System.Threading.Tasks;
 
 namespace _2___Services.BeerService
 {
-    public class GetAllBeerUseCase
+    public class GetAllBeerUseCase<TViewModel>
     {
         private readonly IRepository<BeerEntity> _beerRepository;
-        public GetAllBeerUseCase(IRepository<BeerEntity> beerRepository)
+        private readonly IPresenter<BeerEntity, TViewModel> _presenter;
+        public GetAllBeerUseCase(IRepository<BeerEntity> beerRepository,
+            IPresenter<BeerEntity, TViewModel> presenter)
         {
             _beerRepository = beerRepository;
+            _presenter = presenter;
         }
 
-        public async Task<IEnumerable<BeerEntity>> ExecuteAsync()
-            => await _beerRepository.GetAllAsync();
+        public async Task<IEnumerable<TViewModel>> ExecuteAsync()
+        {
+            var beerEntities = await _beerRepository.GetAllAsync();
+
+            return beerEntities.Select(b => _presenter.Present(b));
+        }
     }
 }
