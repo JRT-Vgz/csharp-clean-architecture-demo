@@ -1,4 +1,4 @@
-﻿namespace _1___Entities
+﻿namespace _3___Data
 {
     public class Class1
     {
