@@ -15,7 +15,7 @@ namespace _3___Data.Models
         public int Id { get; set; }
         public string Name { get; set; }
 
-        [Column(TypeName = "decimal(2,2)")]
+        [Column(TypeName = "decimal(10,2)")]
         public decimal Alcohol { get; set; }
         public int IdBrand { get; set; }
 

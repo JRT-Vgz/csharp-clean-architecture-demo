@@ -15,13 +15,13 @@ namespace _3___Repositories
 
         public async Task<IEnumerable<BeerEntity>> GetAllAsync()
         {
-            var beerModels = await _breweryContext.Beers.ToListAsync();
+            var beerModels = await _breweryContext.Beers.Include("Brand").ToListAsync();
 
             return beerModels.Select(b => new BeerEntity
             {
                 Id = b.Id,
                 Name = b.Name,
-                BrandName = "marca",
+                BrandName = b.Brand.Name,
                 Alcohol = b.Alcohol
             });
         }

@@ -1,0 +1,33 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v8.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v8.0": {
+      "2 - Services/1.0.0": {
+        "runtime": {
+          "2 - Services.dll": {}
+        }
+      },
+      "1 - Entities/1.0.0": {
+        "runtime": {
+          "1 - Entities.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "2 - Services/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "1 - Entities/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
