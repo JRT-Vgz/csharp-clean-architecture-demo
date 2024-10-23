@@ -14,6 +14,7 @@ namespace _3___Data
         {
             modelBuilder.Entity<BeerModel>().ToTable("Beer");
             modelBuilder.Entity<BrandModel>().ToTable("Brand");
+
         }
     }
 }

@@ -29,11 +29,15 @@ builder.Services.AddAutoMapper(typeof(BeerMappingProfile));
 
 // BEER ENTITY DEPENDENCIES
 builder.Services.AddScoped<IRepository<BeerEntity>, BeerRepository>();
-builder.Services.AddScoped<IPresenter<BeerEntity, BeerViewModel>, BeerPresenter>();
+builder.Services.AddScoped<IPresenter<BeerEntity, BeerDetailViewModel>, BeerDetailPresenter>();
 
-builder.Services.AddScoped<GetAllBeerUseCase<BeerViewModel>>();
-builder.Services.AddScoped<GetBeerByIdUseCase<BeerViewModel>>();
+builder.Services.AddScoped<GetAllBeerUseCase<BeerDto>>();
+builder.Services.AddScoped<GetBeerByIdUseCase<BeerDto>>();
 builder.Services.AddScoped<AddBeerUseCase<BeerInsertDto, BeerDto>>();
+builder.Services.AddScoped<UpdateBeerUseCase<BeerUpdateDto, BeerDto>>();
+builder.Services.AddScoped<DeleteBeerUseCase<BeerDto>>();
+builder.Services.AddScoped<GetAllBeerDetailUseCase<BeerDetailViewModel>>();
+builder.Services.AddScoped<GetBeerDetailByIdUseCase<BeerDetailViewModel>>();
 
 
 
@@ -54,7 +58,7 @@ app.UseHttpsRedirection();
 // -------------------------------------  ENDPOINTS  -------------------------------------
 // ------ BEER ENTITY ENDPOINTS ------
 // GET ALL BEER
-app.MapGet("/beer", async (GetAllBeerUseCase<BeerViewModel> beerUseCase) =>
+app.MapGet("/beer", async (GetAllBeerUseCase<BeerDto> beerUseCase) =>
 {
     return await beerUseCase.ExecuteAsync();
 })
@@ -62,7 +66,7 @@ app.MapGet("/beer", async (GetAllBeerUseCase<BeerViewModel> beerUseCase) =>
 .WithOpenApi();
 
 // GET BEER BY ID
-app.MapGet("/beer/{id}", async (GetBeerByIdUseCase<BeerViewModel> beerUseCase, int id) =>
+app.MapGet("/beer/{id}", async (GetBeerByIdUseCase<BeerDto> beerUseCase, int id) =>
 {
     return await beerUseCase.ExecuteAsync(id);
 })
@@ -72,11 +76,46 @@ app.MapGet("/beer/{id}", async (GetBeerByIdUseCase<BeerViewModel> beerUseCase, i
 // ADD BEER
 app.MapPost("/beer", async (AddBeerUseCase<BeerInsertDto, BeerDto> beerUseCase, BeerInsertDto beerInsertDto) =>
 {
-    return await beerUseCase.ExecuteAsync(beerInsertDto);
+    var beerDto = await beerUseCase.ExecuteAsync(beerInsertDto);
+
+    return Results.Created($"/beer/{beerDto.Id}", beerDto);
 })
 .WithName("addBeer")
 .WithOpenApi();
 
+// UPDATE BEER
+app.MapPut("/beer/{id}", async (UpdateBeerUseCase<BeerUpdateDto, BeerDto> beerUseCase, BeerUpdateDto beerUpdateDto, int id) =>
+{
+    var beerDto = await beerUseCase.ExecuteAsync(beerUpdateDto, id);
+
+    return Results.Ok(beerDto);
+})
+.WithName("updateBeer")
+.WithOpenApi();
+
+// DELETE BEER
+app.MapDelete("/beer/{id}", async (DeleteBeerUseCase<BeerDto> beerUseCase, int id) =>
+{
+    return await beerUseCase.ExecuteAsync(id);
+})
+.WithName("deleteBeer")
+.WithOpenApi();
+
+// GET ALL BEER DETAIL
+app.MapGet("/beerDetail", async (GetAllBeerDetailUseCase<BeerDetailViewModel> beerUseCase) =>
+{
+    return await beerUseCase.ExecuteAsync();
+})
+.WithName("getAllBeerDetail")
+.WithOpenApi();
+
+// GET BEER BY ID DETAIL
+app.MapGet("/beerDetail/{id}", async (GetBeerDetailByIdUseCase<BeerDetailViewModel> beerUseCase, int id) =>
+{
+    return await beerUseCase.ExecuteAsync(id);
+})
+.WithName("getBeerDetailById")
+.WithOpenApi();
 
 app.Run();
 

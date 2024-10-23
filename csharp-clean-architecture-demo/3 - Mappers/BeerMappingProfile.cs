@@ -17,7 +17,9 @@ namespace _3___Mappers
             CreateMap<BeerEntity, BeerDto>();
             CreateMap<BeerInsertDto, BeerEntity>();
             CreateMap<BeerModel, BeerEntity>();
-            CreateMap<BeerEntity, BeerModel>();
+            CreateMap<BeerEntity, BeerModel>()
+                .ForMember(dest => dest.Id, map => map.Ignore());
+            CreateMap<BeerUpdateDto, BeerEntity>();
         }
     }
 }

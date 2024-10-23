@@ -28,8 +28,7 @@ namespace _2___Services.BeerService
 
             beerEntity = await _beerRepository.AddAsync(beerEntity);
 
-            var beerDto = _mapper.Map<TDto>(beerEntity);
-            return beerDto;
+            return _mapper.Map<TDto>(beerEntity);
         }
     }
 }

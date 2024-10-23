@@ -3,16 +3,8 @@
   "WorkspaceRootPath": "C:\\Users\\Miguel\\Desktop\\csharp-clean-architecture-demo\\csharp-clean-architecture-demo\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{95C439B9-21EB-408C-806D-6C5EE26EE278}|3 - Repositories\\3 - Repositories.csproj|c:\\users\\miguel\\desktop\\csharp-clean-architecture-demo\\csharp-clean-architecture-demo\\3 - repositories\\beerrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{95C439B9-21EB-408C-806D-6C5EE26EE278}|3 - Repositories\\3 - Repositories.csproj|solutionrelative:3 - repositories\\beerrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{BE8E0F5D-5C96-4FF2-B337-7DA97DC58026}|4 - API\\4 - API.csproj|c:\\users\\miguel\\desktop\\csharp-clean-architecture-demo\\csharp-clean-architecture-demo\\4 - api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{BE8E0F5D-5C96-4FF2-B337-7DA97DC58026}|4 - API\\4 - API.csproj|solutionrelative:4 - api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{365E1803-93C7-4D36-B425-5753378E4C2E}|3 - Mappers\\3 - Mappers.csproj|c:\\users\\miguel\\desktop\\csharp-clean-architecture-demo\\csharp-clean-architecture-demo\\3 - mappers\\beermappingprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{365E1803-93C7-4D36-B425-5753378E4C2E}|3 - Mappers\\3 - Mappers.csproj|solutionrelative:3 - mappers\\beermappingprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -31,38 +23,12 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "BeerRepository.cs",
-              "DocumentMoniker": "C:\\Users\\Miguel\\Desktop\\csharp-clean-architecture-demo\\csharp-clean-architecture-demo\\3 - Repositories\\BeerRepository.cs",
-              "RelativeDocumentMoniker": "3 - Repositories\\BeerRepository.cs",
-              "ToolTip": "C:\\Users\\Miguel\\Desktop\\csharp-clean-architecture-demo\\csharp-clean-architecture-demo\\3 - Repositories\\BeerRepository.cs",
-              "RelativeToolTip": "3 - Repositories\\BeerRepository.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABMAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-22T17:18:23.899Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "BeerMappingProfile.cs",
-              "DocumentMoniker": "C:\\Users\\Miguel\\Desktop\\csharp-clean-architecture-demo\\csharp-clean-architecture-demo\\3 - Mappers\\BeerMappingProfile.cs",
-              "RelativeDocumentMoniker": "3 - Mappers\\BeerMappingProfile.cs",
-              "ToolTip": "C:\\Users\\Miguel\\Desktop\\csharp-clean-architecture-demo\\csharp-clean-architecture-demo\\3 - Mappers\\BeerMappingProfile.cs",
-              "RelativeToolTip": "3 - Mappers\\BeerMappingProfile.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABMAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-22T17:07:19.277Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\Miguel\\Desktop\\csharp-clean-architecture-demo\\csharp-clean-architecture-demo\\4 - API\\Program.cs",
               "RelativeDocumentMoniker": "4 - API\\Program.cs",
               "ToolTip": "C:\\Users\\Miguel\\Desktop\\csharp-clean-architecture-demo\\csharp-clean-architecture-demo\\4 - API\\Program.cs",
               "RelativeToolTip": "4 - API\\Program.cs",
-              "ViewState": "AQIAAAMAAAAAAAAAAAAAABAAAAAhAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAGsAAAACAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-10-22T17:06:37.442Z",
               "EditorCaption": ""

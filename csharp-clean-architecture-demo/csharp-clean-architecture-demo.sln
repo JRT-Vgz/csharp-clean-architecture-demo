@@ -13,9 +13,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "3 - Repositories", "3 - Rep
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "4 - API", "4 - API\4 - API.csproj", "{BE8E0F5D-5C96-4FF2-B337-7DA97DC58026}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "3 - Presenters", "3 - Presenters\3 - Presenters.csproj", "{1DBBC3D9-C167-47D2-A5E0-817BD0B69F8B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "3 - Presenters", "3 - Presenters\3 - Presenters.csproj", "{1DBBC3D9-C167-47D2-A5E0-817BD0B69F8B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "3 - Mappers", "3 - Mappers\3 - Mappers.csproj", "{365E1803-93C7-4D36-B425-5753378E4C2E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "3 - Mappers", "3 - Mappers\3 - Mappers.csproj", "{365E1803-93C7-4D36-B425-5753378E4C2E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

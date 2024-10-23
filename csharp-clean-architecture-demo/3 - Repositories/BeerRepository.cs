@@ -4,6 +4,7 @@ using _3___Data;
 using _3___Data.Models;
 using AutoMapper;
 using Microsoft.EntityFrameworkCore;
+using static Org.BouncyCastle.Asn1.Cmp.Challenge;
 
 namespace _3___Repositories
 {
@@ -20,7 +21,7 @@ namespace _3___Repositories
 
         public async Task<IEnumerable<BeerEntity>> GetAllAsync()
         {
-            var beerModels = await _breweryContext.Beers.Include("Brand").ToListAsync();
+            var beerModels = await _breweryContext.Beers.Include("Brand").OrderBy(b => b.Id).ToListAsync();
 
             return beerModels.Select(b => _mapper.Map<BeerEntity>(b));
         }
@@ -44,14 +45,29 @@ namespace _3___Repositories
 
         }
 
-        public BeerEntity UpdateAsync(BeerEntity entity)
+        public async Task<BeerEntity> UpdateAsync(BeerEntity beerEntity, int id)
         {
-            throw new NotImplementedException();
+            var beerModel = await _breweryContext.Beers.FindAsync(id);
+
+            _mapper.Map(beerEntity, beerModel);
+
+            _breweryContext.Beers.Attach(beerModel);
+            _breweryContext.Beers.Entry(beerModel).State = EntityState.Modified;
+            await _breweryContext.SaveChangesAsync();
+
+            await _breweryContext.Brands.FindAsync(beerModel.IdBrand);
+            return _mapper.Map<BeerEntity>(beerModel);
         }
 
-        public BeerEntity DeleteAsync(int id)
+        public async Task<BeerEntity> DeleteAsync(int id)
         {
-            throw new NotImplementedException();
+            var beerModel = await _breweryContext.Beers.Include("Brand").FirstOrDefaultAsync(b => b.Id == id);
+
+            _breweryContext.Beers.Remove(beerModel);
+            await _breweryContext.SaveChangesAsync();
+
+            return _mapper.Map<BeerEntity>(beerModel);
+
         }
     }
 }
