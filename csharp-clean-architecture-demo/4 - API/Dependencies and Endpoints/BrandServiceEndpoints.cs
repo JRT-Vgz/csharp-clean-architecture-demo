@@ -3,6 +3,10 @@ using _2___Services.BrandService;
 using _2___Services.Interfaces;
 using _3___Mappers.Dtos.BrandDtos;
 using _3___Repositories;
+using _4___API.Validators.BrandValidators;
+using FluentValidation;
+using FluentValidation.AspNetCore;
+using Microsoft.AspNetCore.Identity;
 
 namespace _4___API.Endpoints
 {
@@ -12,6 +16,8 @@ namespace _4___API.Endpoints
         {
             services.AddScoped<IRepository<BrandEntity>, BrandRepository>();
 
+            services.AddValidatorsFromAssemblyContaining<BrandInsertValidator>();
+            
             services.AddScoped<GetAllBrandUseCase<BrandDto>>();
             services.AddScoped<GetBrandByIdUseCase<BrandDto>>();
             services.AddScoped<AddBrandUseCase<BrandInsertDto, BrandDto>>();
@@ -38,8 +44,13 @@ namespace _4___API.Endpoints
             .WithOpenApi();
 
             // ADD BRAND
-            app.MapPost("/brand", async (AddBrandUseCase<BrandInsertDto, BrandDto> brandUseCase, BrandInsertDto brandInsertDto) =>
+            app.MapPost("/brand", async (AddBrandUseCase<BrandInsertDto, 
+                BrandDto> brandUseCase, BrandInsertDto brandInsertDto,
+                IValidator<BrandInsertDto> formValidator) =>
             {
+                var formValidationResult = formValidator.Validate(brandInsertDto);
+                if (!formValidationResult.IsValid) { return Results.ValidationProblem(formValidationResult.ToDictionary()); }
+
                 var brandDto = await brandUseCase.ExecuteAsync(brandInsertDto);
 
                 return Results.Created($"/brand/{brandDto.Id}", brandDto);
@@ -48,8 +59,13 @@ namespace _4___API.Endpoints
             .WithOpenApi();
 
             // UPDATE BRAND
-            app.MapPut("/brand/{id}", async (UpdateBrandUseCase<BrandUpdateDto, BrandDto> brandUseCase, BrandUpdateDto brandUpdateDto, int id) =>
+            app.MapPut("/brand/{id}", async (UpdateBrandUseCase<BrandUpdateDto, BrandDto> brandUseCase, 
+                BrandUpdateDto brandUpdateDto, int id,
+                IValidator<BrandUpdateDto> formValidator) =>
             {
+                var formValidationResult = formValidator.Validate(brandUpdateDto);
+                if (!formValidationResult.IsValid) { return Results.ValidationProblem(formValidationResult.ToDictionary()); }
+
                 var brandDto = await brandUseCase.ExecuteAsync(brandUpdateDto, id);
 
                 return Results.Ok(brandDto);

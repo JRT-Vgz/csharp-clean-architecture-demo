@@ -134,3 +134,6 @@ C:\Users\Miguel\Desktop\csharp-clean-architecture-demo\csharp-clean-architecture
 C:\Users\Miguel\Desktop\csharp-clean-architecture-demo\csharp-clean-architecture-demo\4 - API\bin\Debug\net8.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
 C:\Users\Miguel\Desktop\csharp-clean-architecture-demo\csharp-clean-architecture-demo\4 - API\bin\Debug\net8.0\3 - Mappers.dll
 C:\Users\Miguel\Desktop\csharp-clean-architecture-demo\csharp-clean-architecture-demo\4 - API\bin\Debug\net8.0\3 - Mappers.pdb
+C:\Users\Miguel\Desktop\csharp-clean-architecture-demo\csharp-clean-architecture-demo\4 - API\bin\Debug\net8.0\FluentValidation.dll
+C:\Users\Miguel\Desktop\csharp-clean-architecture-demo\csharp-clean-architecture-demo\4 - API\bin\Debug\net8.0\FluentValidation.AspNetCore.dll
+C:\Users\Miguel\Desktop\csharp-clean-architecture-demo\csharp-clean-architecture-demo\4 - API\bin\Debug\net8.0\FluentValidation.DependencyInjectionExtensions.dll

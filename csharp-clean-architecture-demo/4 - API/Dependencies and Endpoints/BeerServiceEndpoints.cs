@@ -5,6 +5,8 @@ using _3___Mappers.Dtos.BeerDtos;
 using _3___Presenters;
 using _3___Presenters.ViewModels;
 using _3___Repositories;
+using _4___API.Validators.BeerValidators;
+using FluentValidation;
 
 namespace _4___API.Endpoints
 {
@@ -15,6 +17,8 @@ namespace _4___API.Endpoints
         {
             services.AddScoped<IRepository<BeerEntity>, BeerRepository>();
             services.AddScoped<IPresenter<BeerEntity, BeerDetailViewModel>, BeerDetailPresenter>();
+
+            services.AddValidatorsFromAssemblyContaining<BeerInsertValidator>();
 
             services.AddScoped<GetAllBeerUseCase<BeerDto>>();
             services.AddScoped<GetBeerByIdUseCase<BeerDto>>();
@@ -44,8 +48,13 @@ namespace _4___API.Endpoints
             .WithOpenApi();
 
             // ADD BEER
-            app.MapPost("/beer", async (AddBeerUseCase<BeerInsertDto, BeerDto> beerUseCase, BeerInsertDto beerInsertDto) =>
+            app.MapPost("/beer", async (AddBeerUseCase<BeerInsertDto, BeerDto> beerUseCase, 
+                BeerInsertDto beerInsertDto,
+                IValidator<BeerInsertDto> formValidator) =>
             {
+                var formValidationResult = formValidator.Validate(beerInsertDto);
+                if (!formValidationResult.IsValid) { return Results.ValidationProblem(formValidationResult.ToDictionary()); }
+
                 var beerDto = await beerUseCase.ExecuteAsync(beerInsertDto);
 
                 return Results.Created($"/beer/{beerDto.Id}", beerDto);
@@ -54,8 +63,13 @@ namespace _4___API.Endpoints
             .WithOpenApi();
 
             // UPDATE BEER
-            app.MapPut("/beer/{id}", async (UpdateBeerUseCase<BeerUpdateDto, BeerDto> beerUseCase, BeerUpdateDto beerUpdateDto, int id) =>
+            app.MapPut("/beer/{id}", async (UpdateBeerUseCase<BeerUpdateDto, BeerDto> beerUseCase, 
+                BeerUpdateDto beerUpdateDto, int id,
+                IValidator<BeerUpdateDto> formValidator) =>
             {
+                var formValidationResult = formValidator.Validate(beerUpdateDto);
+                if (!formValidationResult.IsValid) { return Results.ValidationProblem(formValidationResult.ToDictionary()); }
+
                 var beerDto = await beerUseCase.ExecuteAsync(beerUpdateDto, id);
 
                 return Results.Ok(beerDto);
