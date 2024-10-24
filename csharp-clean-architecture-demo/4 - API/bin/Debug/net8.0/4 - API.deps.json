@@ -846,6 +846,15 @@
         "runtime": {
           "3 - Repositories.dll": {}
         }
+      },
+      "3 - Validators/1.0.0": {
+        "dependencies": {
+          "2 - Services": "1.0.0",
+          "3 - Mappers": "1.0.0"
+        },
+        "runtime": {
+          "3 - Validators.dll": {}
+        }
       }
     }
   },
@@ -1413,6 +1422,11 @@
       "sha512": ""
     },
     "3 - Repositories/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "3 - Validators/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

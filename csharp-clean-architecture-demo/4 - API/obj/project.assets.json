@@ -1497,6 +1497,20 @@
         "runtime": {
           "bin/placeholder/3 - Repositories.dll": {}
         }
+      },
+      "3 - Validators/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v8.0",
+        "dependencies": {
+          "2 - Services": "1.0.0",
+          "3 - Mappers": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/3 - Validators.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/3 - Validators.dll": {}
+        }
       }
     }
   },
@@ -4325,6 +4339,11 @@
       "type": "project",
       "path": "../3 - Repositories/3 - Repositories.csproj",
       "msbuildProject": "../3 - Repositories/3 - Repositories.csproj"
+    },
+    "3 - Validators/1.0.0": {
+      "type": "project",
+      "path": "../3 - Validators/3 - Validators.csproj",
+      "msbuildProject": "../3 - Validators/3 - Validators.csproj"
     }
   },
   "projectFileDependencyGroups": {
@@ -4335,6 +4354,7 @@
       "3 - Mappers >= 1.0.0",
       "3 - Presenters >= 1.0.0",
       "3 - Repositories >= 1.0.0",
+      "3 - Validators >= 1.0.0",
       "FluentValidation >= 11.10.0",
       "FluentValidation.AspNetCore >= 11.3.0",
       "Microsoft.AspNetCore.OpenApi >= 8.0.8",
@@ -4387,6 +4407,9 @@
             },
             "C:\\Users\\Miguel\\Desktop\\csharp-clean-architecture-demo\\csharp-clean-architecture-demo\\3 - Repositories\\3 - Repositories.csproj": {
               "projectPath": "C:\\Users\\Miguel\\Desktop\\csharp-clean-architecture-demo\\csharp-clean-architecture-demo\\3 - Repositories\\3 - Repositories.csproj"
+            },
+            "C:\\Users\\Miguel\\Desktop\\csharp-clean-architecture-demo\\csharp-clean-architecture-demo\\3 - Validators\\3 - Validators.csproj": {
+              "projectPath": "C:\\Users\\Miguel\\Desktop\\csharp-clean-architecture-demo\\csharp-clean-architecture-demo\\3 - Validators\\3 - Validators.csproj"
             }
           }
         }

@@ -18,7 +18,7 @@ namespace _4___API.Endpoints
             services.AddScoped<IRepository<BeerEntity>, BeerRepository>();
             services.AddScoped<IPresenter<BeerEntity, BeerDetailViewModel>, BeerDetailPresenter>();
 
-            services.AddValidatorsFromAssemblyContaining<BeerInsertValidator>();
+            services.AddValidatorsFromAssemblyContaining<BeerInsertFormValidator>();
 
             services.AddScoped<GetAllBeerUseCase<BeerDto>>();
             services.AddScoped<GetBeerByIdUseCase<BeerDto>>();

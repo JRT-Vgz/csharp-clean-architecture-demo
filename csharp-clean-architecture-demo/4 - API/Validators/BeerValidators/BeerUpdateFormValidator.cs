@@ -3,9 +3,9 @@ using FluentValidation;
 
 namespace _4___API.Validators.BeerValidators
 {
-    public class BeerUpdateValidator: AbstractValidator<BeerUpdateDto>
+    public class BeerUpdateFormValidator: AbstractValidator<BeerUpdateDto>
     {
-        public BeerUpdateValidator() 
+        public BeerUpdateFormValidator() 
         {
             {
                 RuleFor(b => b.Name)

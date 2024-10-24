@@ -3,19 +3,16 @@ using FluentValidation;
 
 namespace _4___API.Validators.BrandValidators
 {
-    public class BrandUpdateValidator : AbstractValidator<BrandUpdateDto>
+    public class BrandInsertFormValidator : AbstractValidator<BrandInsertDto>
     {
-        public BrandUpdateValidator() 
+        public BrandInsertFormValidator()
         {
             RuleFor(b => b.Name)
                 .NotEmpty()
                     .WithMessage("El campo 'Name' no puede estar vacío.")
                 .MaximumLength(30)
                     .WithMessage("El campo 'Name' no puede superar los 30 caracteres.")
-                .Matches("^[a-zA-Z0-9]*$").WithMessage("El campo 'Name' solo puede contener caracteres alfanuméricos.");
-
-
-
+                .Matches("^[a-zA-Z0-9áéíóúÁÉÍÓÚàèìòùÀÈÌÒÙäëïöüÄËÏÖÜÑñçÇ]*$").WithMessage("El campo 'Name' solo puede contener caracteres alfanuméricos.");
         }
     }
 }

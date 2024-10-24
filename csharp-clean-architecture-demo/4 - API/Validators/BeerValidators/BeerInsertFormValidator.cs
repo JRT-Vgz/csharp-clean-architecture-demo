@@ -3,9 +3,9 @@ using FluentValidation;
 
 namespace _4___API.Validators.BeerValidators
 {
-    public class BeerInsertValidator : AbstractValidator<BeerInsertDto>
+    public class BeerInsertFormValidator : AbstractValidator<BeerInsertDto>
     {
-        public BeerInsertValidator()
+        public BeerInsertFormValidator()
         {
             RuleFor(b => b.Name)
                 .NotEmpty()

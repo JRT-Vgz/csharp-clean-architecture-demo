@@ -4,7 +4,6 @@ using _3___Data;
 using _3___Data.Models;
 using AutoMapper;
 using Microsoft.EntityFrameworkCore;
-using static Org.BouncyCastle.Asn1.Cmp.Challenge;
 
 namespace _3___Repositories
 {

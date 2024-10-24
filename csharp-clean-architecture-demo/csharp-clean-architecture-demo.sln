@@ -17,6 +17,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "3 - Presenters", "3 - Prese
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "3 - Mappers", "3 - Mappers\3 - Mappers.csproj", "{365E1803-93C7-4D36-B425-5753378E4C2E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "3 - Validators", "3 - Validators\3 - Validators.csproj", "{FEA7BF8F-7519-4FB2-8842-D4E1E5AE189B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -51,6 +53,10 @@ Global
 		{365E1803-93C7-4D36-B425-5753378E4C2E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{365E1803-93C7-4D36-B425-5753378E4C2E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{365E1803-93C7-4D36-B425-5753378E4C2E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FEA7BF8F-7519-4FB2-8842-D4E1E5AE189B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FEA7BF8F-7519-4FB2-8842-D4E1E5AE189B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FEA7BF8F-7519-4FB2-8842-D4E1E5AE189B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FEA7BF8F-7519-4FB2-8842-D4E1E5AE189B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

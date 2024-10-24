@@ -25,6 +25,7 @@
     <ProjectReference Include="..\3 - Mappers\3 - Mappers.csproj" />
     <ProjectReference Include="..\3 - Presenters\3 - Presenters.csproj" />
     <ProjectReference Include="..\3 - Repositories\3 - Repositories.csproj" />
+    <ProjectReference Include="..\3 - Validators\3 - Validators.csproj" />
   </ItemGroup>
 
 </Project>
