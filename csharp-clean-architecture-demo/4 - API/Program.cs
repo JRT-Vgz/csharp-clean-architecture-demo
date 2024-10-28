@@ -1,5 +1,6 @@
 using _3___Data;
 using _3___Mappers;
+using _4___API.Dependencies_and_Endpoints;
 using _4___API.Endpoints;
 using _4___API.Middlewares;
 using Microsoft.EntityFrameworkCore;
@@ -28,6 +29,9 @@ builder.Services.AddBeerServiceDependencies();
 // BRAND SERVICE DEPENDENCIES
 builder.Services.AddBrandServiceDependencies();
 
+// POST SERVICE DEPENDENCIES
+builder.Services.AddPostServiceDependencies(builder.Configuration);
+
 // ---------------------------------------------------------------------------------------
 // ------------------------------  BUILD AND CONFIGURATION  ------------------------------
 var app = builder.Build();
@@ -46,13 +50,19 @@ app.UseHttpsRedirection();
 // MIDDLEWARES
 app.UseMiddleware<RequestValidationExceptionMiddleware>();
 app.UseMiddleware<NotFoundExceptionMiddleware>();
+app.UseMiddleware<HttpRequestExceptionMiddleware>();
 
 // BEER SERVICE ENDPOINTS
 app.MapBeerServiceEndpoints();
 
 // BRAND SERVICE ENDPOINTS
 app.MapBrandServiceEndpoints();
+
+// POST EXTERNAL SERVICE ENDPOINTS
+app.MapPostServiceEndpoints();
+
 // ---------------------------------------------------------------------------------------
+
 
 
 app.Run();

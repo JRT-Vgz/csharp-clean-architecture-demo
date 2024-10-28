@@ -2,7 +2,6 @@
 using _2___Services.BeerService;
 using _2___Services.Interfaces;
 using _3___Mappers.Dtos.BeerDtos;
-using _3___Mappers.Dtos.BrandDtos;
 using _3___Presenters;
 using _3___Presenters.ViewModels;
 using _3___Repositories;

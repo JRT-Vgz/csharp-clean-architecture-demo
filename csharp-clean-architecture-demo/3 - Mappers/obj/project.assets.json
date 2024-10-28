@@ -788,6 +788,20 @@
           "bin/placeholder/2 - Services.dll": {}
         }
       },
+      "3 -  Adapters/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v8.0",
+        "dependencies": {
+          "1 - Entities": "1.0.0",
+          "2 - Services": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/3 -  Adapters.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/3 -  Adapters.dll": {}
+        }
+      },
       "3 - Data/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v8.0",
@@ -2452,6 +2466,11 @@
       "path": "../2 - Services/2 - Services.csproj",
       "msbuildProject": "../2 - Services/2 - Services.csproj"
     },
+    "3 -  Adapters/1.0.0": {
+      "type": "project",
+      "path": "../3 -  Adapters/3 -  Adapters.csproj",
+      "msbuildProject": "../3 -  Adapters/3 -  Adapters.csproj"
+    },
     "3 - Data/1.0.0": {
       "type": "project",
       "path": "../3 - Data/3 - Data.csproj",
@@ -2462,6 +2481,7 @@
     "net8.0": [
       "1 - Entities >= 1.0.0",
       "2 - Services >= 1.0.0",
+      "3 -  Adapters >= 1.0.0",
       "3 - Data >= 1.0.0",
       "AutoMapper.Extensions.Microsoft.DependencyInjection >= 12.0.1"
     ]
@@ -2499,6 +2519,9 @@
             },
             "C:\\Users\\Miguel\\Desktop\\csharp-clean-architecture-demo\\csharp-clean-architecture-demo\\2 - Services\\2 - Services.csproj": {
               "projectPath": "C:\\Users\\Miguel\\Desktop\\csharp-clean-architecture-demo\\csharp-clean-architecture-demo\\2 - Services\\2 - Services.csproj"
+            },
+            "C:\\Users\\Miguel\\Desktop\\csharp-clean-architecture-demo\\csharp-clean-architecture-demo\\3 -  Adapters\\3 -  Adapters.csproj": {
+              "projectPath": "C:\\Users\\Miguel\\Desktop\\csharp-clean-architecture-demo\\csharp-clean-architecture-demo\\3 -  Adapters\\3 -  Adapters.csproj"
             },
             "C:\\Users\\Miguel\\Desktop\\csharp-clean-architecture-demo\\csharp-clean-architecture-demo\\3 - Data\\3 - Data.csproj": {
               "projectPath": "C:\\Users\\Miguel\\Desktop\\csharp-clean-architecture-demo\\csharp-clean-architecture-demo\\3 - Data\\3 - Data.csproj"

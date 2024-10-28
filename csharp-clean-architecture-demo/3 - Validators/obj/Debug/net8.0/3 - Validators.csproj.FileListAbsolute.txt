@@ -20,3 +20,5 @@ C:\Users\Miguel\Desktop\csharp-clean-architecture-demo\csharp-clean-architecture
 C:\Users\Miguel\Desktop\csharp-clean-architecture-demo\csharp-clean-architecture-demo\3 - Validators\obj\Debug\net8.0\refint\3 - Validators.dll
 C:\Users\Miguel\Desktop\csharp-clean-architecture-demo\csharp-clean-architecture-demo\3 - Validators\obj\Debug\net8.0\3 - Validators.pdb
 C:\Users\Miguel\Desktop\csharp-clean-architecture-demo\csharp-clean-architecture-demo\3 - Validators\obj\Debug\net8.0\ref\3 - Validators.dll
+C:\Users\Miguel\Desktop\csharp-clean-architecture-demo\csharp-clean-architecture-demo\3 - Validators\bin\Debug\net8.0\3 -  Adapters.dll
+C:\Users\Miguel\Desktop\csharp-clean-architecture-demo\csharp-clean-architecture-demo\3 - Validators\bin\Debug\net8.0\3 -  Adapters.pdb

@@ -442,6 +442,15 @@
           "2 - Services.dll": {}
         }
       },
+      "3 -  Adapters/1.0.0": {
+        "dependencies": {
+          "1 - Entities": "1.0.0",
+          "2 - Services": "1.0.0"
+        },
+        "runtime": {
+          "3 -  Adapters.dll": {}
+        }
+      },
       "3 - Data/1.0.0": {
         "dependencies": {
           "MySql.EntityFrameworkCore": "8.0.8"
@@ -454,6 +463,7 @@
         "dependencies": {
           "1 - Entities": "1.0.0",
           "2 - Services": "1.0.0",
+          "3 -  Adapters": "1.0.0",
           "3 - Data": "1.0.0",
           "AutoMapper.Extensions.Microsoft.DependencyInjection": "12.0.1"
         },
@@ -797,6 +807,11 @@
       "sha512": ""
     },
     "2 - Services/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "3 -  Adapters/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

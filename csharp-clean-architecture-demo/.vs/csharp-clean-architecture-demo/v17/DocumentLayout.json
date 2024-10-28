@@ -1,7 +1,20 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\Users\\Miguel\\Desktop\\csharp-clean-architecture-demo\\csharp-clean-architecture-demo\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{B08AA3A9-3927-43CE-A33E-57E440305C4D}|4 - Console\\4 - Console.csproj|c:\\users\\miguel\\desktop\\csharp-clean-architecture-demo\\csharp-clean-architecture-demo\\4 - console\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B08AA3A9-3927-43CE-A33E-57E440305C4D}|4 - Console\\4 - Console.csproj|solutionrelative:4 - console\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BE8E0F5D-5C96-4FF2-B337-7DA97DC58026}|4 - API\\4 - API.csproj|c:\\users\\miguel\\desktop\\csharp-clean-architecture-demo\\csharp-clean-architecture-demo\\4 - api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BE8E0F5D-5C96-4FF2-B337-7DA97DC58026}|4 - API\\4 - API.csproj|solutionrelative:4 - api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BE8E0F5D-5C96-4FF2-B337-7DA97DC58026}|4 - API\\4 - API.csproj|c:\\users\\miguel\\desktop\\csharp-clean-architecture-demo\\csharp-clean-architecture-demo\\4 - api\\dependencies and endpoints\\beerserviceendpoints.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BE8E0F5D-5C96-4FF2-B337-7DA97DC58026}|4 - API\\4 - API.csproj|solutionrelative:4 - api\\dependencies and endpoints\\beerserviceendpoints.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -9,11 +22,50 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": -1,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "BeerServiceEndpoints.cs",
+              "DocumentMoniker": "C:\\Users\\Miguel\\Desktop\\csharp-clean-architecture-demo\\csharp-clean-architecture-demo\\4 - API\\Dependencies and Endpoints\\BeerServiceEndpoints.cs",
+              "RelativeDocumentMoniker": "4 - API\\Dependencies and Endpoints\\BeerServiceEndpoints.cs",
+              "ToolTip": "C:\\Users\\Miguel\\Desktop\\csharp-clean-architecture-demo\\csharp-clean-architecture-demo\\4 - API\\Dependencies and Endpoints\\BeerServiceEndpoints.cs",
+              "RelativeToolTip": "4 - API\\Dependencies and Endpoints\\BeerServiceEndpoints.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABkAAAAwAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-28T17:06:43.374Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\Miguel\\Desktop\\csharp-clean-architecture-demo\\csharp-clean-architecture-demo\\4 - Console\\Program.cs",
+              "RelativeDocumentMoniker": "4 - Console\\Program.cs",
+              "ToolTip": "C:\\Users\\Miguel\\Desktop\\csharp-clean-architecture-demo\\csharp-clean-architecture-demo\\4 - Console\\Program.cs",
+              "RelativeToolTip": "4 - Console\\Program.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAABLAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-28T16:57:53.322Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\Miguel\\Desktop\\csharp-clean-architecture-demo\\csharp-clean-architecture-demo\\4 - API\\Program.cs",
+              "RelativeDocumentMoniker": "4 - API\\Program.cs",
+              "ToolTip": "C:\\Users\\Miguel\\Desktop\\csharp-clean-architecture-demo\\csharp-clean-architecture-demo\\4 - API\\Program.cs",
+              "RelativeToolTip": "4 - API\\Program.cs",
+              "ViewState": "AQIAAAgAAAAAAAAAAAAAABcAAAAQAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-28T16:18:25.56Z",
+              "EditorCaption": ""
             }
           ]
         }

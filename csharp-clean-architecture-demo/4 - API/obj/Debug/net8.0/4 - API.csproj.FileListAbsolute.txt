@@ -139,3 +139,7 @@ C:\Users\Miguel\Desktop\csharp-clean-architecture-demo\csharp-clean-architecture
 C:\Users\Miguel\Desktop\csharp-clean-architecture-demo\csharp-clean-architecture-demo\4 - API\bin\Debug\net8.0\FluentValidation.DependencyInjectionExtensions.dll
 C:\Users\Miguel\Desktop\csharp-clean-architecture-demo\csharp-clean-architecture-demo\4 - API\bin\Debug\net8.0\3 - Validators.dll
 C:\Users\Miguel\Desktop\csharp-clean-architecture-demo\csharp-clean-architecture-demo\4 - API\bin\Debug\net8.0\3 - Validators.pdb
+C:\Users\Miguel\Desktop\csharp-clean-architecture-demo\csharp-clean-architecture-demo\4 - API\bin\Debug\net8.0\3 -  Adapters.dll
+C:\Users\Miguel\Desktop\csharp-clean-architecture-demo\csharp-clean-architecture-demo\4 - API\bin\Debug\net8.0\4 - ExternalServices.dll
+C:\Users\Miguel\Desktop\csharp-clean-architecture-demo\csharp-clean-architecture-demo\4 - API\bin\Debug\net8.0\3 -  Adapters.pdb
+C:\Users\Miguel\Desktop\csharp-clean-architecture-demo\csharp-clean-architecture-demo\4 - API\bin\Debug\net8.0\4 - ExternalServices.pdb
