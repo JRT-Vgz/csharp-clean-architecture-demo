@@ -2,7 +2,7 @@
 using System.Net;
 using System.Text.Json;
 
-namespace _4___API.Mddlewares
+namespace _4___API.Middlewares
 {
     public class RequestValidationExceptionMiddleware
     {

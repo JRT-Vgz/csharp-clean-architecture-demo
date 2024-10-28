@@ -1,4 +1,5 @@
 using _1___Entities;
+using _2___Services.Exceptions;
 using _2___Services.Interfaces;
 
 namespace _2___Services.BeerService
@@ -17,6 +18,8 @@ namespace _2___Services.BeerService
         public async Task<TViewModel> ExecuteAsync(int id)
         {
             var beerEntity = await _beerRepository.GetByIdAsync(id);
+
+            if (beerEntity == null) { throw new NotFoundException($"No se encontró ninguna cerveza con ID {id}"); }
 
             return _presenter.Present(beerEntity);
         }

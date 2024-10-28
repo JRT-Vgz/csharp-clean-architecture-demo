@@ -27,9 +27,12 @@ namespace _2___Services.BrandService
 
             var brandEntity = _mapper.Map<BrandEntity>(brandUpdateDto);
 
-            brandEntity = await _brandRepository.UpdateAsync(brandEntity, id);
+            var updatedBrandEntity = await _brandRepository.UpdateAsync(brandEntity, id);
 
-            return _mapper.Map<TDto>(brandEntity);
+            if (updatedBrandEntity == null) { throw new NotFoundException($"No se encontró ninguna marca con ID {id}"); }
+
+            return _mapper.Map<TDto>(updatedBrandEntity);
+
         }
     }
 }

@@ -45,6 +45,8 @@ namespace _3___Repositories
         {
             var brandModel = await _breweryContext.Brands.FindAsync(id);
 
+            if (brandModel == null) { return null; }
+
             _mapper.Map(brandEntity, brandModel);
 
             _breweryContext.Brands.Attach(brandModel);
@@ -57,6 +59,8 @@ namespace _3___Repositories
         public async Task<BrandEntity> DeleteAsync(int id)
         {
             var brandModel = await _breweryContext.Brands.FindAsync(id);
+
+            if (brandModel == null) { return null; }
 
             _breweryContext.Brands.Remove(brandModel);
             await _breweryContext.SaveChangesAsync();

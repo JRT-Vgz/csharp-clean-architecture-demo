@@ -48,6 +48,8 @@ namespace _3___Repositories
         {
             var beerModel = await _breweryContext.Beers.FindAsync(id);
 
+            if (beerModel == null) { return null; }
+
             _mapper.Map(beerEntity, beerModel);
 
             _breweryContext.Beers.Attach(beerModel);
@@ -61,6 +63,8 @@ namespace _3___Repositories
         public async Task<BeerEntity> DeleteAsync(int id)
         {
             var beerModel = await _breweryContext.Beers.Include("Brand").FirstOrDefaultAsync(b => b.Id == id);
+
+            if (beerModel == null) { return null; }
 
             _breweryContext.Beers.Remove(beerModel);
             await _breweryContext.SaveChangesAsync();

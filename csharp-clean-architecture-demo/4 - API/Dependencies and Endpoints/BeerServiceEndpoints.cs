@@ -2,10 +2,12 @@
 using _2___Services.BeerService;
 using _2___Services.Interfaces;
 using _3___Mappers.Dtos.BeerDtos;
+using _3___Mappers.Dtos.BrandDtos;
 using _3___Presenters;
 using _3___Presenters.ViewModels;
 using _3___Repositories;
-using _4___API.Validators.BeerValidators;
+using _3___Validators.RequestValidators;
+using _4___API.FormValidators.BeerValidators;
 using FluentValidation;
 
 namespace _4___API.Endpoints
@@ -19,6 +21,8 @@ namespace _4___API.Endpoints
             services.AddScoped<IPresenter<BeerEntity, BeerDetailViewModel>, BeerDetailPresenter>();
 
             services.AddValidatorsFromAssemblyContaining<BeerInsertFormValidator>();
+            services.AddScoped<IRequestValidator<BeerInsertDto>, BeerInsertValidator>();
+            services.AddScoped<IRequestValidator<BeerUpdateDto>, BeerUpdateValidator>();
 
             services.AddScoped<GetAllBeerUseCase<BeerDto>>();
             services.AddScoped<GetBeerByIdUseCase<BeerDto>>();
@@ -69,6 +73,8 @@ namespace _4___API.Endpoints
             {
                 var formValidationResult = formValidator.Validate(beerUpdateDto);
                 if (!formValidationResult.IsValid) { return Results.ValidationProblem(formValidationResult.ToDictionary()); }
+
+                if (beerUpdateDto.Id != id) { return Results.BadRequest($"El ID en el cuerpo de la solicitud ({beerUpdateDto.Id}) no coincide con el ID en la ruta ({id})."); }
 
                 var beerDto = await beerUseCase.ExecuteAsync(beerUpdateDto, id);
 

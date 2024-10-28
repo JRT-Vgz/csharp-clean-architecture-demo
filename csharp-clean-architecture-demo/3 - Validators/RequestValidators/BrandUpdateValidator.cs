@@ -1,4 +1,3 @@
-
 using _2___Services.Interfaces;
 using _3___Data;
 using _3___Mappers.Dtos.BrandDtos;
@@ -15,11 +14,12 @@ namespace _3___Validators.RequestValidators
             _breweryContext = breweryContext;
             Errors = new List<string>();
         }
+
         public async Task<bool> Validate(BrandUpdateDto brandUpdateDto)
         {
-            var exists = await _breweryContext.Brands.AnyAsync(b => b.Name == brandUpdateDto.Name);
+            var brandModel = await _breweryContext.Brands.FirstOrDefaultAsync(b => b.Name == brandUpdateDto.Name);
 
-            if (exists)
+            if (brandModel != null && brandModel.Id != brandUpdateDto.Id)
             {
                 Errors.Add("Ya existe una marca con ese nombre.");
                 return false;

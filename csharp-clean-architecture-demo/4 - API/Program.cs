@@ -1,7 +1,7 @@
 using _3___Data;
 using _3___Mappers;
 using _4___API.Endpoints;
-using _4___API.Mddlewares;
+using _4___API.Middlewares;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -43,11 +43,14 @@ app.UseHttpsRedirection();
 
 
 // -------------------------------------  ENDPOINTS  -------------------------------------
+// MIDDLEWARES
+app.UseMiddleware<RequestValidationExceptionMiddleware>();
+app.UseMiddleware<NotFoundExceptionMiddleware>();
+
 // BEER SERVICE ENDPOINTS
 app.MapBeerServiceEndpoints();
 
 // BRAND SERVICE ENDPOINTS
-app.UseMiddleware<RequestValidationExceptionMiddleware>();
 app.MapBrandServiceEndpoints();
 // ---------------------------------------------------------------------------------------
 

@@ -1,4 +1,5 @@
 using _1___Entities;
+using _2___Services.Exceptions;
 using _2___Services.Interfaces;
 using AutoMapper;
 
@@ -19,6 +20,8 @@ namespace _2___Services.BrandService
         public async Task<TDto> ExecuteAsync(int id)
         {
             var brandEntity = await _brandRepository.GetByIdAsync(id);
+
+            if (brandEntity == null) { throw new NotFoundException($"No se encontró ninguna marca con ID {id}"); }
 
             return _mapper.Map<TDto>(brandEntity);
         }

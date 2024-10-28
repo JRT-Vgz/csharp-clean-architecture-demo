@@ -4,7 +4,7 @@ using _2___Services.Interfaces;
 using _3___Mappers.Dtos.BrandDtos;
 using _3___Repositories;
 using _3___Validators.RequestValidators;
-using _4___API.Validators.BrandValidators;
+using _4___API.FormValidators.BrandValidators;
 using FluentValidation;
 
 namespace _4___API.Endpoints
@@ -67,6 +67,8 @@ namespace _4___API.Endpoints
                 var formValidationResult = formValidator.Validate(brandUpdateDto);
                 if (!formValidationResult.IsValid) { return Results.ValidationProblem(formValidationResult.ToDictionary()); }
 
+                if (brandUpdateDto.Id != id) { return Results.BadRequest($"El ID en el cuerpo de la solicitud ({brandUpdateDto.Id}) no coincide con el ID en la ruta ({id})."); }
+                
                 var brandDto = await brandUseCase.ExecuteAsync(brandUpdateDto, id);
 
                 return Results.Ok(brandDto);
