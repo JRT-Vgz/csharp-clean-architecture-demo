@@ -3,7 +3,7 @@ using _2___Services.Exceptions;
 using _2___Services.Interfaces;
 using AutoMapper;
 
-namespace _2___Services.BeerService
+namespace _2___Services.Services.BeerService
 {
     public class AddBeerUseCase<TInsertDto, TDto>
     {
@@ -11,7 +11,7 @@ namespace _2___Services.BeerService
         private readonly IMapper _mapper;
         private readonly IRequestValidator<TInsertDto> _requestValidator;
 
-        public AddBeerUseCase(IRepository<BeerEntity> beerRepository, 
+        public AddBeerUseCase(IRepository<BeerEntity> beerRepository,
             IMapper mapper,
             IRequestValidator<TInsertDto> requestValidator)
 
@@ -28,9 +28,9 @@ namespace _2___Services.BeerService
 
             var beerEntity = _mapper.Map<BeerEntity>(beerInsertDto);
 
-            beerEntity = await _beerRepository.AddAsync(beerEntity);
+            var insertedBeerEntity = await _beerRepository.AddAsync(beerEntity);
 
-            return _mapper.Map<TDto>(beerEntity);
+            return _mapper.Map<TDto>(insertedBeerEntity);
         }
     }
 }

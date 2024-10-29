@@ -1,11 +1,11 @@
 ﻿using _1___Entities;
 using _2___Services.Interfaces;
 using FluentValidation;
-using _2___Services.PostService;
 using _3____Adapters.Interfaces;
 using _4___ExternalServices;
 using _3____Adapters.Dtos;
 using _3____Adapters;
+using _2___Services.Services.PostService;
 
 namespace _4___API.Dependencies_and_Endpoints
 {

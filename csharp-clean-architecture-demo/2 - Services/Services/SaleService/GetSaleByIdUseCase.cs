@@ -2,7 +2,7 @@
 using _1___Entities;
 using _2___Services.Interfaces;
 
-namespace _2___Services.SaleService
+namespace _2___Services.Services.SaleService
 {
     public class GetSaleByIdUseCase
     {

@@ -6,9 +6,11 @@ using FluentValidation;
 using _2___Services._Interfaces;
 using _3___Mappers.Dtos.SaleDtos;
 using _3___Mappers.ManualMappers;
-using _2___Services.SaleService;
 using _3___Data.Models;
 using _4___API.FormValidators.SaleFormValidators;
+using _2___Services.Exceptions;
+using _2___Services.Services.SaleService;
+using _3___Validators.EntityValidators;
 
 namespace _4___API.Dependencies_and_Endpoints
 {
@@ -22,6 +24,7 @@ namespace _4___API.Dependencies_and_Endpoints
 
             services.AddValidatorsFromAssemblyContaining<SaleInsertFormValidator>();
             services.AddScoped<IRequestValidator<SaleInsertDto>, SaleInsertValidator>();
+            services.AddScoped<IEntityValidator<SaleEntity>, SaleEntityValidator>();
 
             services.AddScoped<AddSaleUseCase<SaleInsertDto>>();
             services.AddScoped<GetAllSaleUseCase>();
@@ -33,7 +36,7 @@ namespace _4___API.Dependencies_and_Endpoints
         {
             // GET ALL SALE
             app.MapGet("/sale", async (GetAllSaleUseCase saleUseCase) =>
-            {
+            {               
                 return await saleUseCase.ExecuteAsync();
             })
             .WithName("getAllSale")

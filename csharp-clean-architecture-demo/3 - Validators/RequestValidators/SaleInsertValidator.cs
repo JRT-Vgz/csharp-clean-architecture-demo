@@ -29,10 +29,6 @@ namespace _3___Validators.RequestValidators
                 if (!beerExists) { Errors.Add($"No existe ninguna cerveza con 'Id' {concept.IdBeer}"); }
             }
 
-            //if (sale.Total <= 0)
-            //    throw new ValidationException("Una venta debe tener más de $ 0.00 en Total.");
-           
-
             if (Errors.Count > 0) { return false; }
             return true;
         }

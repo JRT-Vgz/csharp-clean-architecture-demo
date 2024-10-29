@@ -3,7 +3,7 @@ using _2___Services.Exceptions;
 using _2___Services.Interfaces;
 using AutoMapper;
 
-namespace _2___Services.BrandService
+namespace _2___Services.Services.BrandService
 {
     public class GetBrandByIdUseCase<TDto>
     {

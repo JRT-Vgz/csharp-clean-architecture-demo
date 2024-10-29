@@ -3,7 +3,7 @@ using _2___Services.Exceptions;
 using _2___Services.Interfaces;
 using AutoMapper;
 
-namespace _2___Services.BeerService
+namespace _2___Services.Services.BeerService
 {
     public class UpdateBeerUseCase<TUpdateDto, TDto>
     {
@@ -28,7 +28,6 @@ namespace _2___Services.BeerService
             var beerEntity = _mapper.Map<BeerEntity>(beerUpdateDto);
 
             var updatedBeerEntity = await _beerRepository.UpdateAsync(beerEntity, id);
-
             if (updatedBeerEntity == null) { throw new NotFoundException($"No se encontró ninguna cerveza con ID {id}"); }
 
             return _mapper.Map<TDto>(updatedBeerEntity);

@@ -2,7 +2,7 @@ using _1___Entities;
 using _2___Services.Exceptions;
 using _2___Services.Interfaces;
 
-namespace _2___Services.BeerService
+namespace _2___Services.Services.BeerService
 {
     public class GetBeerDetailByIdUseCase<TViewModel>
     {

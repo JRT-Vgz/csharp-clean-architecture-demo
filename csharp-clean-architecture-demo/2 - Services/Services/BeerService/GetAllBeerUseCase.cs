@@ -2,7 +2,7 @@ using _1___Entities;
 using _2___Services.Interfaces;
 using AutoMapper;
 
-namespace _2___Services.BeerService
+namespace _2___Services.Services.BeerService
 {
     public class GetAllBeerUseCase<TDto>
     {

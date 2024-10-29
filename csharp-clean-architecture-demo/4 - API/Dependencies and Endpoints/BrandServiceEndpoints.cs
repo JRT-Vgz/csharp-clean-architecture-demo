@@ -1,6 +1,6 @@
 ﻿using _1___Entities;
-using _2___Services.BrandService;
 using _2___Services.Interfaces;
+using _2___Services.Services.BrandService;
 using _3___Mappers.Dtos.BrandDtos;
 using _3___Repositories;
 using _3___Validators.RequestValidators;

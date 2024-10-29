@@ -1,6 +1,6 @@
 ﻿using _1___Entities;
-using _2___Services.BeerService;
 using _2___Services.Interfaces;
+using _2___Services.Services.BeerService;
 using _3___Mappers.Dtos.BeerDtos;
 using _3___Presenters;
 using _3___Presenters.ViewModels;

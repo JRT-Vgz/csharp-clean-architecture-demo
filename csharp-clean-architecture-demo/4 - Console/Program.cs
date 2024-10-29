@@ -1,6 +1,6 @@
 ﻿using _1___Entities;
-using _2___Services.BeerService;
 using _2___Services.Interfaces;
+using _2___Services.Services.BeerService;
 using _3___Data;
 using _3___Mappers.AutoMappers;
 using _3___Mappers.Dtos.BeerDtos;

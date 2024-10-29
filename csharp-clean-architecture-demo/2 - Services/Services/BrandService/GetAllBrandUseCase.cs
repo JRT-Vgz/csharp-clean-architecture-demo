@@ -2,14 +2,14 @@ using _1___Entities;
 using _2___Services.Interfaces;
 using AutoMapper;
 
-namespace _2___Services.BrandService
+namespace _2___Services.Services.BrandService
 {
     public class GetAllBrandUseCase<TDto>
     {
         private readonly IRepository<BrandEntity> _brandRepository;
         private readonly IMapper _mapper;
 
-        public GetAllBrandUseCase(IRepository<BrandEntity> brandRepository, 
+        public GetAllBrandUseCase(IRepository<BrandEntity> brandRepository,
             IMapper mapper)
         {
             _brandRepository = brandRepository;

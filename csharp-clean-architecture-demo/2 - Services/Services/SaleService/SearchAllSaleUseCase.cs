@@ -4,11 +4,11 @@ using _2___Services._Interfaces;
 using System.Linq.Expressions;
 using System;
 
-namespace _2___Services.SaleService
+namespace _2___Services.Services.SaleService
 {
     public class SearchAllSaleUseCase<TModel>
     {
-        private IRepositorySearch<TModel, SaleEntity> _saleRepositorySearch;
+        private readonly IRepositorySearch<TModel, SaleEntity> _saleRepositorySearch;
         public SearchAllSaleUseCase(IRepositorySearch<TModel, SaleEntity> saleRepositorySearch)
         {
             _saleRepositorySearch = saleRepositorySearch;
