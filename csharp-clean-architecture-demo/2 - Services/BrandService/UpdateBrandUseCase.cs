@@ -22,8 +22,8 @@ namespace _2___Services.BrandService
 
         public async Task<TDto> ExecuteAsync(TUpdateDto brandUpdateDto, int id)
         {
-            var requestValidation = await _requestValidator.Validate(brandUpdateDto);
-            if (!requestValidation) { throw new RequestValidationException(_requestValidator.Errors); }
+            var isValid = await _requestValidator.Validate(brandUpdateDto);
+            if (!isValid) { throw new RequestValidationException(_requestValidator.Errors); }
 
             var brandEntity = _mapper.Map<BrandEntity>(brandUpdateDto);
 

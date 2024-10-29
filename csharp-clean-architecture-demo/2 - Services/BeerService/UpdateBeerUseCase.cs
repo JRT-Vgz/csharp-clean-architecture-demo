@@ -22,8 +22,8 @@ namespace _2___Services.BeerService
 
         public async Task<TDto> ExecuteAsync(TUpdateDto beerUpdateDto, int id)
         {
-            var requestValidation = await _requestValidator.Validate(beerUpdateDto);
-            if (!requestValidation) { throw new RequestValidationException(_requestValidator.Errors); }
+            var isValid = await _requestValidator.Validate(beerUpdateDto);
+            if (!isValid) { throw new RequestValidationException(_requestValidator.Errors); }
 
             var beerEntity = _mapper.Map<BeerEntity>(beerUpdateDto);
 

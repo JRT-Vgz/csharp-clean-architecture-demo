@@ -1,20 +1,14 @@
 ﻿using _1___Entities;
-using _2___Services.BeerService;
 using _2___Services.Interfaces;
-using _3___Mappers.Dtos.BeerDtos;
-using _3___Presenters.ViewModels;
-using _3___Presenters;
 using _3___Repositories;
 using _3___Validators.RequestValidators;
-using _4___API.FormValidators.BeerValidators;
 using FluentValidation;
 using _2___Services._Interfaces;
 using _3___Mappers.Dtos.SaleDtos;
 using _3___Mappers.ManualMappers;
 using _2___Services.SaleService;
-using _2___Services.BrandService;
-using _3___Mappers.Dtos.BrandDtos;
 using _3___Data.Models;
+using _4___API.FormValidators.SaleFormValidators;
 
 namespace _4___API.Dependencies_and_Endpoints
 {
@@ -25,6 +19,9 @@ namespace _4___API.Dependencies_and_Endpoints
             services.AddScoped<IRepository<SaleEntity>, SaleRepository>();
             services.AddScoped<IRepositorySearch<SaleModel, SaleEntity>, SaleRepository>();
             services.AddScoped<IManualMapper<SaleInsertDto, SaleEntity>, SaleInsertMapper>();
+
+            services.AddValidatorsFromAssemblyContaining<SaleInsertFormValidator>();
+            services.AddScoped<IRequestValidator<SaleInsertDto>, SaleInsertValidator>();
 
             services.AddScoped<AddSaleUseCase<SaleInsertDto>>();
             services.AddScoped<GetAllSaleUseCase>();
@@ -59,8 +56,12 @@ namespace _4___API.Dependencies_and_Endpoints
             .WithOpenApi();
 
             // ADD SALE
-            app.MapPost("/sale", async (AddSaleUseCase<SaleInsertDto> saleUseCase, SaleInsertDto saleInsertDto) =>
+            app.MapPost("/sale", async (AddSaleUseCase<SaleInsertDto> saleUseCase, SaleInsertDto saleInsertDto,
+                IValidator<SaleInsertDto> formValidator) =>
             {
+                var formValidationResult = formValidator.Validate(saleInsertDto);
+                if (!formValidationResult.IsValid) { return Results.ValidationProblem(formValidationResult.ToDictionary()); }
+
                 await saleUseCase.ExecuteAsync(saleInsertDto);
 
                 return Results.Created();

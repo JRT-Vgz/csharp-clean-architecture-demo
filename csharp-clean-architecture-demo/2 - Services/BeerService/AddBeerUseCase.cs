@@ -23,8 +23,8 @@ namespace _2___Services.BeerService
 
         public async Task<TDto> ExecuteAsync(TInsertDto beerInsertDto)
         {
-            var result = await _requestValidator.Validate(beerInsertDto);
-            if (!result) { throw new RequestValidationException(_requestValidator.Errors); }
+            var isValid = await _requestValidator.Validate(beerInsertDto);
+            if (!isValid) { throw new RequestValidationException(_requestValidator.Errors); }
 
             var beerEntity = _mapper.Map<BeerEntity>(beerInsertDto);
 
