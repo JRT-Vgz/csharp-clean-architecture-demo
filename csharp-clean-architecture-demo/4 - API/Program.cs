@@ -1,5 +1,5 @@
 using _3___Data;
-using _3___Mappers;
+using _3___Mappers.AutoMappers;
 using _4___API.Dependencies_and_Endpoints;
 using _4___API.Endpoints;
 using _4___API.Middlewares;
@@ -32,6 +32,9 @@ builder.Services.AddBrandServiceDependencies();
 // POST SERVICE DEPENDENCIES
 builder.Services.AddPostServiceDependencies(builder.Configuration);
 
+// SALE SERVICE DEPENDENCIES
+builder.Services.AddSaleServiceDependencies();
+
 // ---------------------------------------------------------------------------------------
 // ------------------------------  BUILD AND CONFIGURATION  ------------------------------
 var app = builder.Build();
@@ -60,6 +63,10 @@ app.MapBrandServiceEndpoints();
 
 // POST EXTERNAL SERVICE ENDPOINTS
 app.MapPostServiceEndpoints();
+
+// SALE SERVICE ENDPOINTS
+app.MapSaleServiceEndpoints();
+
 
 // ---------------------------------------------------------------------------------------
 

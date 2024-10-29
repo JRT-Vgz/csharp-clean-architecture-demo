@@ -2,7 +2,7 @@
 using _2___Services.BeerService;
 using _2___Services.Interfaces;
 using _3___Data;
-using _3___Mappers;
+using _3___Mappers.AutoMappers;
 using _3___Mappers.Dtos.BeerDtos;
 using _3___Repositories;
 using Microsoft.EntityFrameworkCore;

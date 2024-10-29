@@ -28,6 +28,8 @@ namespace _3___Repositories
         {
             var brandModel = await _breweryContext.Brands.FindAsync(id);
 
+            if (brandModel == null) { return null; }
+
             return _mapper.Map<BrandEntity>(brandModel);
         }
 

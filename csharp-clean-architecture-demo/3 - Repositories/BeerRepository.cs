@@ -29,6 +29,8 @@ namespace _3___Repositories
         {
             var beerModel = await _breweryContext.Beers.Include("Brand").FirstOrDefaultAsync(b => b.Id == id);
 
+            if (beerModel == null) { return null; }
+
             return _mapper.Map<BeerEntity>(beerModel);
         }
 

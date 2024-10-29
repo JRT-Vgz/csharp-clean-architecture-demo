@@ -3,11 +3,11 @@ using _1___Entities;
 using _3____Adapters.Dtos;
 using AutoMapper;
 
-namespace _3___Mappers
+namespace _3___Mappers.AutoMappers
 {
     public class PostESMappingProfile : Profile
     {
-        public PostESMappingProfile() 
+        public PostESMappingProfile()
         {
             CreateMap<PostESDto, PostEntity>();
         }

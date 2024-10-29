@@ -3,11 +3,11 @@ using _3___Data.Models;
 using _3___Mappers.Dtos.BrandDtos;
 using AutoMapper;
 
-namespace _3___Mappers
+namespace _3___Mappers.AutoMappers
 {
     public class BrandMappingProfile : Profile
     {
-        public BrandMappingProfile() 
+        public BrandMappingProfile()
         {
             CreateMap<BrandInsertDto, BrandEntity>();
             CreateMap<BrandUpdateDto, BrandEntity>();
