@@ -1,9 +1,10 @@
 ﻿using _1___Entities;
+using _2___Services._Interfaces;
 using _2___Services.Interfaces;
 using _2___Services.Services.BrandService;
 using _3___Mappers.Dtos.BrandDtos;
 using _3___Repositories;
-using _3___Validators.RequestValidators;
+using _3___Validators.EntityValidators;
 using _4___API.FormValidators.BrandValidators;
 using FluentValidation;
 
@@ -16,8 +17,7 @@ namespace _4___API.Endpoints
             services.AddScoped<IRepository<BrandEntity>, BrandRepository>();
 
             services.AddValidatorsFromAssemblyContaining<BrandInsertFormValidator>();
-            services.AddScoped<IRequestValidator<BrandInsertDto>, BrandInsertValidator>();
-            services.AddScoped<IRequestValidator<BrandUpdateDto>, BrandUpdateValidator>();
+            services.AddScoped<IEntityValidator<BrandEntity>, BrandEntityValidator>();
 
             services.AddScoped<GetAllBrandUseCase<BrandDto>>();
             services.AddScoped<GetBrandByIdUseCase<BrandDto>>();

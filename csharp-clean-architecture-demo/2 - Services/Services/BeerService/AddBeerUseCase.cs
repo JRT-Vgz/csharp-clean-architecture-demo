@@ -1,4 +1,6 @@
 using _1___Entities;
+using _2___Services._Exceptions;
+using _2___Services._Interfaces;
 using _2___Services.Exceptions;
 using _2___Services.Interfaces;
 using AutoMapper;
@@ -9,24 +11,23 @@ namespace _2___Services.Services.BeerService
     {
         private readonly IRepository<BeerEntity> _beerRepository;
         private readonly IMapper _mapper;
-        private readonly IRequestValidator<TInsertDto> _requestValidator;
-
+        private readonly IEntityValidator<BeerEntity> _entityValidator;
         public AddBeerUseCase(IRepository<BeerEntity> beerRepository,
             IMapper mapper,
-            IRequestValidator<TInsertDto> requestValidator)
+            IEntityValidator<BeerEntity> entityValidator)
 
         {
             _beerRepository = beerRepository;
             _mapper = mapper;
-            _requestValidator = requestValidator;
+            _entityValidator = entityValidator;
         }
 
         public async Task<TDto> ExecuteAsync(TInsertDto beerInsertDto)
         {
-            var isValid = await _requestValidator.Validate(beerInsertDto);
-            if (!isValid) { throw new RequestValidationException(_requestValidator.Errors); }
-
             var beerEntity = _mapper.Map<BeerEntity>(beerInsertDto);
+
+            var isValid = await _entityValidator.Validate(beerEntity);
+            if (!isValid) { throw new EntityValidationException(_entityValidator.Errors); }
 
             var insertedBeerEntity = await _beerRepository.AddAsync(beerEntity);
 

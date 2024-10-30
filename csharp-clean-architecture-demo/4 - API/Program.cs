@@ -35,6 +35,9 @@ builder.Services.AddPostServiceDependencies(builder.Configuration);
 // SALE SERVICE DEPENDENCIES
 builder.Services.AddSaleServiceDependencies();
 
+// CONCEPT SERVICE DEPENDENCIES
+builder.Services.AddConceptServiceDependencies();
+
 // ---------------------------------------------------------------------------------------
 // ------------------------------  BUILD AND CONFIGURATION  ------------------------------
 var app = builder.Build();
@@ -51,9 +54,10 @@ app.UseHttpsRedirection();
 
 // -------------------------------------  ENDPOINTS  -------------------------------------
 // MIDDLEWARES
-app.UseMiddleware<RequestValidationExceptionMiddleware>();
+app.UseMiddleware<EntityValidationExceptionMiddleware>();
 app.UseMiddleware<NotFoundExceptionMiddleware>();
 app.UseMiddleware<HttpRequestExceptionMiddleware>();
+app.UseMiddleware<NotImplementedExceptionMiddleware>();
 
 // BEER SERVICE ENDPOINTS
 app.MapBeerServiceEndpoints();
@@ -66,6 +70,9 @@ app.MapPostServiceEndpoints();
 
 // SALE SERVICE ENDPOINTS
 app.MapSaleServiceEndpoints();
+
+// CONCEPT SERVICE ENDPOINTS
+app.MapConceptServiceEndpoints();
 
 
 // ---------------------------------------------------------------------------------------

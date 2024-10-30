@@ -1,7 +1,6 @@
 ﻿using _1___Entities;
 using _2___Services.Interfaces;
 using _3___Repositories;
-using _3___Validators.RequestValidators;
 using FluentValidation;
 using _2___Services._Interfaces;
 using _3___Mappers.Dtos.SaleDtos;
@@ -11,6 +10,8 @@ using _4___API.FormValidators.SaleFormValidators;
 using _2___Services.Exceptions;
 using _2___Services.Services.SaleService;
 using _3___Validators.EntityValidators;
+using _2___Services.Services.BeerService;
+using _3___Mappers.Dtos.BeerDtos;
 
 namespace _4___API.Dependencies_and_Endpoints
 {
@@ -23,19 +24,20 @@ namespace _4___API.Dependencies_and_Endpoints
             services.AddScoped<IManualMapper<SaleInsertDto, SaleEntity>, SaleInsertMapper>();
 
             services.AddValidatorsFromAssemblyContaining<SaleInsertFormValidator>();
-            services.AddScoped<IRequestValidator<SaleInsertDto>, SaleInsertValidator>();
             services.AddScoped<IEntityValidator<SaleEntity>, SaleEntityValidator>();
 
-            services.AddScoped<AddSaleUseCase<SaleInsertDto>>();
-            services.AddScoped<GetAllSaleUseCase>();
-            services.AddScoped<GetSaleByIdUseCase>();
-            services.AddScoped<SearchAllSaleUseCase<SaleModel>>();
+            services.AddScoped<AddSaleUseCase<SaleInsertDto, SaleDto>>();
+            services.AddScoped<GetAllSaleUseCase<SaleDto>>();
+            services.AddScoped<GetSaleByIdUseCase<SaleDto>>();
+            services.AddScoped<SearchAllSaleUseCase<SaleModel, SaleDto>>();
+            services.AddScoped<DeleteSaleUseCase<SaleDto>>();
+            services.AddScoped<UpdateSaleUseCase>();
         }
 
         public static void MapSaleServiceEndpoints(this WebApplication app)
         {
             // GET ALL SALE
-            app.MapGet("/sale", async (GetAllSaleUseCase saleUseCase) =>
+            app.MapGet("/sale", async (GetAllSaleUseCase<SaleDto> saleUseCase) =>
             {               
                 return await saleUseCase.ExecuteAsync();
             })
@@ -43,7 +45,7 @@ namespace _4___API.Dependencies_and_Endpoints
             .WithOpenApi();
 
             // SEARCH ALL SALE BY TOTAL
-            app.MapGet("/sale/search/{total}", async (SearchAllSaleUseCase<SaleModel> saleUseCase, decimal total) =>
+            app.MapGet("/sale/search/{total}", async (SearchAllSaleUseCase<SaleModel, SaleDto> saleUseCase, decimal total) =>
             {
                 return await saleUseCase.ExecuteAsync(s => s.Total >= total);
             })
@@ -51,7 +53,7 @@ namespace _4___API.Dependencies_and_Endpoints
             .WithOpenApi();
 
             // GET SALE BY ID
-            app.MapGet("/sale/{id}", async (GetSaleByIdUseCase saleUseCase, int id) =>
+            app.MapGet("/sale/{id}", async (GetSaleByIdUseCase<SaleDto> saleUseCase, int id) =>
             {
                 return await saleUseCase.ExecuteAsync(id);
             })
@@ -59,18 +61,34 @@ namespace _4___API.Dependencies_and_Endpoints
             .WithOpenApi();
 
             // ADD SALE
-            app.MapPost("/sale", async (AddSaleUseCase<SaleInsertDto> saleUseCase, SaleInsertDto saleInsertDto,
+            app.MapPost("/sale", async (AddSaleUseCase<SaleInsertDto, SaleDto> saleUseCase, SaleInsertDto saleInsertDto,
                 IValidator<SaleInsertDto> formValidator) =>
             {
                 var formValidationResult = formValidator.Validate(saleInsertDto);
                 if (!formValidationResult.IsValid) { return Results.ValidationProblem(formValidationResult.ToDictionary()); }
 
-                await saleUseCase.ExecuteAsync(saleInsertDto);
+                var saleDto = await saleUseCase.ExecuteAsync(saleInsertDto);
 
-                return Results.Created();
+                return Results.Created($"/sale/{saleDto.Id}", saleDto);
 
             })
             .WithName("addSale")
+            .WithOpenApi();
+
+            // UPDATE SALE
+            app.MapPut("/sale/{id}", async (UpdateSaleUseCase saleUseCase, int id) =>
+            {
+                saleUseCase.Execute();
+            })
+            .WithName("updateSale")
+            .WithOpenApi();
+
+            // DELETE SALE
+            app.MapDelete("/sale/{id}", async (DeleteSaleUseCase<SaleDto> saleUseCase, int id) =>
+            {
+                return await saleUseCase.ExecuteAsync(id);
+            })
+            .WithName("deleteSale")
             .WithOpenApi();
         }
     }

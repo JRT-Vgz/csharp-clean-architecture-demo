@@ -1,20 +1,26 @@
 
 using _1___Entities;
 using _2___Services.Interfaces;
+using AutoMapper;
 
 namespace _2___Services.Services.SaleService
 {
-    public class GetAllSaleUseCase
+    public class GetAllSaleUseCase<TDto>
     {
         private readonly IRepository<SaleEntity> _saleRepository;
-        public GetAllSaleUseCase(IRepository<SaleEntity> saleRepository)
+        private readonly IMapper _mapper;
+        public GetAllSaleUseCase(IRepository<SaleEntity> saleRepository,
+            IMapper mapper)
         {
             _saleRepository = saleRepository;
+            _mapper = mapper;
         }
 
-        public async Task<IEnumerable<SaleEntity>> ExecuteAsync()
+        public async Task<IEnumerable<TDto>> ExecuteAsync()
         {
-            return await _saleRepository.GetAllAsync();
+            var saleEntities =  await _saleRepository.GetAllAsync();
+
+            return saleEntities.Select(s => _mapper.Map<TDto>(s));
         }
     }
 }

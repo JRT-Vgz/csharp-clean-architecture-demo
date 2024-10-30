@@ -1,20 +1,29 @@
 
 using _1___Entities;
+using _2___Services.Exceptions;
 using _2___Services.Interfaces;
+using AutoMapper;
 
 namespace _2___Services.Services.SaleService
 {
-    public class GetSaleByIdUseCase
+    public class GetSaleByIdUseCase<TDto>
     {
         private readonly IRepository<SaleEntity> _saleRepository;
-        public GetSaleByIdUseCase(IRepository<SaleEntity> saleRepository)
+        private readonly IMapper _mapper;
+        public GetSaleByIdUseCase(IRepository<SaleEntity> saleRepository,
+            IMapper mapper)
         {
             _saleRepository = saleRepository;
+            _mapper = mapper;
         }
 
-        public async Task<SaleEntity> ExecuteAsync(int id)
+        public async Task<TDto> ExecuteAsync(int id)
         {
-            return await _saleRepository.GetByIdAsync(id);
+            var saleEntity = await _saleRepository.GetByIdAsync(id);
+
+            if (saleEntity == null) { throw new NotFoundException($"No se encontró ninguna venta con ID {id}"); }
+
+            return _mapper.Map<TDto>(saleEntity);
         }
     }
 }

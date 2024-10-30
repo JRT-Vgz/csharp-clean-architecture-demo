@@ -1,13 +1,14 @@
-﻿using _2___Services.Exceptions;
+﻿using _2___Services._Exceptions;
+using _2___Services.Exceptions;
 using System.Net;
 using System.Text.Json;
 
 namespace _4___API.Middlewares
 {
-    public class RequestValidationExceptionMiddleware
+    public class EntityValidationExceptionMiddleware
     {
         private readonly RequestDelegate _next;
-        public RequestValidationExceptionMiddleware(RequestDelegate next)
+        public EntityValidationExceptionMiddleware(RequestDelegate next)
         {
             _next = next;
         }
@@ -18,13 +19,13 @@ namespace _4___API.Middlewares
             {
                 await _next(context);
             }
-            catch (RequestValidationException ex)
+            catch (EntityValidationException ex)
             {
                 await HandleExceptionAsync(context, ex);
             }
         }
 
-        private static async Task HandleExceptionAsync(HttpContext context, RequestValidationException exception)
+        private static async Task HandleExceptionAsync(HttpContext context, EntityValidationException exception)
         {
             var response = context.Response;
 
@@ -40,6 +41,5 @@ namespace _4___API.Middlewares
 
             await response.WriteAsync(result);
         }
-
     }
 }

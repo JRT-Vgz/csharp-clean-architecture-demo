@@ -18,19 +18,6 @@
           }
         }
       },
-      "AutoMapper.Extensions.Microsoft.DependencyInjection/12.0.1": {
-        "type": "package",
-        "dependencies": {
-          "AutoMapper": "[12.0.1]",
-          "Microsoft.Extensions.Options": "6.0.0"
-        },
-        "compile": {
-          "lib/netstandard2.1/AutoMapper.Extensions.Microsoft.DependencyInjection.dll": {}
-        },
-        "runtime": {
-          "lib/netstandard2.1/AutoMapper.Extensions.Microsoft.DependencyInjection.dll": {}
-        }
-      },
       "BouncyCastle.Cryptography/2.3.1": {
         "type": "package",
         "compile": {
@@ -788,20 +775,6 @@
           "bin/placeholder/2 - Services.dll": {}
         }
       },
-      "3 -  Adapters/1.0.0": {
-        "type": "project",
-        "framework": ".NETCoreApp,Version=v8.0",
-        "dependencies": {
-          "1 - Entities": "1.0.0",
-          "2 - Services": "1.0.0"
-        },
-        "compile": {
-          "bin/placeholder/3 -  Adapters.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/3 -  Adapters.dll": {}
-        }
-      },
       "3 - Data/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v8.0",
@@ -813,23 +786,6 @@
         },
         "runtime": {
           "bin/placeholder/3 - Data.dll": {}
-        }
-      },
-      "3 - Mappers/1.0.0": {
-        "type": "project",
-        "framework": ".NETCoreApp,Version=v8.0",
-        "dependencies": {
-          "1 - Entities": "1.0.0",
-          "2 - Services": "1.0.0",
-          "3 -  Adapters": "1.0.0",
-          "3 - Data": "1.0.0",
-          "AutoMapper.Extensions.Microsoft.DependencyInjection": "12.0.1"
-        },
-        "compile": {
-          "bin/placeholder/3 - Mappers.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/3 - Mappers.dll": {}
         }
       }
     }
@@ -848,20 +804,6 @@
         "icon.png",
         "lib/netstandard2.1/AutoMapper.dll",
         "lib/netstandard2.1/AutoMapper.xml"
-      ]
-    },
-    "AutoMapper.Extensions.Microsoft.DependencyInjection/12.0.1": {
-      "sha512": "+g/K+Vpe3gGMKGzjslMOdqNlkikScDjWfVvmWTayrDHaG/n2pPmFBMa+jKX1r/h6BDGFdkyRjAuhFE3ykW+r1g==",
-      "type": "package",
-      "path": "automapper.extensions.microsoft.dependencyinjection/12.0.1",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "README.md",
-        "automapper.extensions.microsoft.dependencyinjection.12.0.1.nupkg.sha512",
-        "automapper.extensions.microsoft.dependencyinjection.nuspec",
-        "icon.png",
-        "lib/netstandard2.1/AutoMapper.Extensions.Microsoft.DependencyInjection.dll"
       ]
     },
     "BouncyCastle.Cryptography/2.3.1": {
@@ -2483,26 +2425,17 @@
       "path": "../2 - Services/2 - Services.csproj",
       "msbuildProject": "../2 - Services/2 - Services.csproj"
     },
-    "3 -  Adapters/1.0.0": {
-      "type": "project",
-      "path": "../3 -  Adapters/3 -  Adapters.csproj",
-      "msbuildProject": "../3 -  Adapters/3 -  Adapters.csproj"
-    },
     "3 - Data/1.0.0": {
       "type": "project",
       "path": "../3 - Data/3 - Data.csproj",
       "msbuildProject": "../3 - Data/3 - Data.csproj"
-    },
-    "3 - Mappers/1.0.0": {
-      "type": "project",
-      "path": "../3 - Mappers/3 - Mappers.csproj",
-      "msbuildProject": "../3 - Mappers/3 - Mappers.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net8.0": [
+      "1 - Entities >= 1.0.0",
       "2 - Services >= 1.0.0",
-      "3 - Mappers >= 1.0.0"
+      "3 - Data >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -2533,11 +2466,14 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
+            "C:\\Users\\Miguel\\Desktop\\csharp-clean-architecture-demo\\csharp-clean-architecture-demo\\1 - Entities\\1 - Entities.csproj": {
+              "projectPath": "C:\\Users\\Miguel\\Desktop\\csharp-clean-architecture-demo\\csharp-clean-architecture-demo\\1 - Entities\\1 - Entities.csproj"
+            },
             "C:\\Users\\Miguel\\Desktop\\csharp-clean-architecture-demo\\csharp-clean-architecture-demo\\2 - Services\\2 - Services.csproj": {
               "projectPath": "C:\\Users\\Miguel\\Desktop\\csharp-clean-architecture-demo\\csharp-clean-architecture-demo\\2 - Services\\2 - Services.csproj"
             },
-            "C:\\Users\\Miguel\\Desktop\\csharp-clean-architecture-demo\\csharp-clean-architecture-demo\\3 - Mappers\\3 - Mappers.csproj": {
-              "projectPath": "C:\\Users\\Miguel\\Desktop\\csharp-clean-architecture-demo\\csharp-clean-architecture-demo\\3 - Mappers\\3 - Mappers.csproj"
+            "C:\\Users\\Miguel\\Desktop\\csharp-clean-architecture-demo\\csharp-clean-architecture-demo\\3 - Data\\3 - Data.csproj": {
+              "projectPath": "C:\\Users\\Miguel\\Desktop\\csharp-clean-architecture-demo\\csharp-clean-architecture-demo\\3 - Data\\3 - Data.csproj"
             }
           }
         }

@@ -1,4 +1,6 @@
 using _1___Entities;
+using _2___Services._Exceptions;
+using _2___Services._Interfaces;
 using _2___Services.Exceptions;
 using _2___Services.Interfaces;
 using AutoMapper;
@@ -9,23 +11,23 @@ namespace _2___Services.Services.BrandService
     {
         private readonly IRepository<BrandEntity> _brandRepository;
         private readonly IMapper _mapper;
-        private readonly IRequestValidator<TUpdateDto> _requestValidator;
+        private readonly IEntityValidator<BrandEntity> _entityValidator;
 
         public UpdateBrandUseCase(IRepository<BrandEntity> brandRepository,
             IMapper mapper,
-            IRequestValidator<TUpdateDto> requestValidator)
+            IEntityValidator<BrandEntity> entityValidator)
         {
             _brandRepository = brandRepository;
             _mapper = mapper;
-            _requestValidator = requestValidator;
+            _entityValidator = entityValidator;
         }
 
         public async Task<TDto> ExecuteAsync(TUpdateDto brandUpdateDto, int id)
         {
-            var isValid = await _requestValidator.Validate(brandUpdateDto);
-            if (!isValid) { throw new RequestValidationException(_requestValidator.Errors); }
-
             var brandEntity = _mapper.Map<BrandEntity>(brandUpdateDto);
+
+            var isValid = await _entityValidator.Validate(brandEntity);
+            if (!isValid) { throw new EntityValidationException(_entityValidator.Errors); }
 
             var updatedBrandEntity = await _brandRepository.UpdateAsync(brandEntity, id);
 

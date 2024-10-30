@@ -4,6 +4,7 @@ using _2___Services._Interfaces;
 using _2___Services.Interfaces;
 using _3___Data;
 using _3___Data.Models;
+using AutoMapper;
 using Microsoft.EntityFrameworkCore;
 using System.Linq.Expressions;
 
@@ -12,9 +13,12 @@ namespace _3___Repositories
     public class SaleRepository : IRepository<SaleEntity>, IRepositorySearch<SaleModel, SaleEntity>
     {
         private readonly BreweryContext _breweryContext;
-        public SaleRepository(BreweryContext breweryContext) 
+        private readonly IMapper _mapper;
+        public SaleRepository(BreweryContext breweryContext,
+            IMapper mapper) 
         {
             _breweryContext = breweryContext;
+            _mapper = mapper;
         }
 
         public async Task<IEnumerable<SaleEntity>> GetAllAsync()
@@ -23,7 +27,7 @@ namespace _3___Repositories
 
             return saleModels.Select(s => new SaleEntity(s.Id, 
                                            s.Date, 
-                                           s.Concepts.Select(c => new ConceptEntity(c.IdBeer, c.Quantity, c.UnitPrice)).ToList()
+                                           s.Concepts.Select(c => new ConceptEntity(c.Id, c.IdBeer, c.Quantity, c.UnitPrice)).ToList()
                                            ));
         }
 
@@ -31,41 +35,49 @@ namespace _3___Repositories
         {
             var saleModel = await _breweryContext.Sales.FindAsync(id);
 
+            if (saleModel == null) { return null; }
+
             return new SaleEntity(saleModel.Id,
                     saleModel.Date,
                     await _breweryContext.Concepts.Where(c => c.IdSale == saleModel.Id)
-                                            .Select(c => new ConceptEntity(c.IdBeer, c.Quantity, c.UnitPrice))
+                                            .Select(c => new ConceptEntity(c.Id, c.IdBeer, c.Quantity, c.UnitPrice))
                                             .ToListAsync());
                     
         }
 
         public async Task<SaleEntity> AddAsync(SaleEntity saleEntity)
         {
-            var saleModel = new SaleModel
-            {
-                Date = saleEntity.Date,
-                Total = saleEntity.Total,
-                Concepts = saleEntity.Concepts.Select(c => new ConceptModel
-                {
-                    IdBeer = c.IdBeer,
-                    Quantity = c.Quantity,
-                    UnitPrice = c.UnitPrice
-                }).ToList()
-            };
+            var saleModel = _mapper.Map<SaleModel>(saleEntity);
 
             await _breweryContext.Sales.AddAsync(saleModel);
             await _breweryContext.SaveChangesAsync();
 
-            return saleEntity;
+            return _mapper.Map<SaleEntity>(saleModel);
         }
-        public async Task<SaleEntity> UpdateAsync(SaleEntity entity, int id)
+        public async Task<SaleEntity> UpdateAsync(SaleEntity saleEntity, int id)
         {
-            throw new NotImplementedException();
+            var saleModel = await _breweryContext.Sales.FindAsync(id);
+
+            _mapper.Map(saleEntity, saleModel);
+
+            _breweryContext.Sales.Attach(saleModel);
+            _breweryContext.Sales.Entry(saleModel).State = EntityState.Modified;
+            await _breweryContext.SaveChangesAsync();
+
+            return _mapper.Map<SaleEntity>(saleModel);
+
         }
 
         public async Task<SaleEntity> DeleteAsync(int id)
         {
-            throw new NotImplementedException();
+            var saleModel = await _breweryContext.Sales.Include("Concepts").FirstOrDefaultAsync(s => s.Id == id);
+
+            if (saleModel == null) { return null; }
+
+            _breweryContext.Sales.Remove(saleModel);
+            await _breweryContext.SaveChangesAsync();
+
+            return _mapper.Map<SaleEntity>(saleModel);
         }
 
         public async Task<IEnumerable<SaleEntity>> SearchAllAsync(Expression<Func<SaleModel, bool>> predicate)
@@ -80,7 +92,7 @@ namespace _3___Repositories
 
                 foreach (var conceptModel in saleModel.Concepts)
                 {
-                    conceptEntities.Add(new ConceptEntity(conceptModel.IdBeer, conceptModel.Quantity, conceptModel.UnitPrice));
+                    conceptEntities.Add(new ConceptEntity(conceptModel.Id, conceptModel.IdBeer, conceptModel.Quantity, conceptModel.UnitPrice));
                 }
 
                 saleEntities.Add(new SaleEntity(saleModel.Id, saleModel.Date, conceptEntities));

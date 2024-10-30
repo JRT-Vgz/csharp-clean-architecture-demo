@@ -859,8 +859,9 @@
       },
       "3 - Validators/1.0.0": {
         "dependencies": {
+          "1 - Entities": "1.0.0",
           "2 - Services": "1.0.0",
-          "3 - Mappers": "1.0.0"
+          "3 - Data": "1.0.0"
         },
         "runtime": {
           "3 - Validators.dll": {}

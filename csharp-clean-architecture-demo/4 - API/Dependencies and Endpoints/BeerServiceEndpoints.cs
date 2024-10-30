@@ -1,11 +1,12 @@
 ﻿using _1___Entities;
+using _2___Services._Interfaces;
 using _2___Services.Interfaces;
 using _2___Services.Services.BeerService;
 using _3___Mappers.Dtos.BeerDtos;
 using _3___Presenters;
 using _3___Presenters.ViewModels;
 using _3___Repositories;
-using _3___Validators.RequestValidators;
+using _3___Validators.EntityValidators;
 using _4___API.FormValidators.BeerValidators;
 using FluentValidation;
 
@@ -20,8 +21,7 @@ namespace _4___API.Endpoints
             services.AddScoped<IPresenter<BeerEntity, BeerDetailViewModel>, BeerDetailPresenter>();
 
             services.AddValidatorsFromAssemblyContaining<BeerInsertFormValidator>();
-            services.AddScoped<IRequestValidator<BeerInsertDto>, BeerInsertValidator>();
-            services.AddScoped<IRequestValidator<BeerUpdateDto>, BeerUpdateValidator>();
+            services.AddScoped<IEntityValidator<BeerEntity>, BeerEntityValidator>();
 
             services.AddScoped<GetAllBeerUseCase<BeerDto>>();
             services.AddScoped<GetBeerByIdUseCase<BeerDto>>();
