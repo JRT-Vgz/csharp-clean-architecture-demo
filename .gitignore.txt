@@ -24,3 +24,8 @@ TestResults/
 
 # Archivos de configuración de Docker
 docker-compose.override.yml
+
+# Otros
+*.pdb
+*.dll
+*.exe
