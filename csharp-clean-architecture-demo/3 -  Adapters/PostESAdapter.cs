@@ -1,6 +1,6 @@
 
 using _1___Entities;
-using _2___Services.Interfaces;
+using _2___Services._Interfaces;
 using _3____Adapters.Dtos;
 using _3____Adapters.Interfaces;
 using AutoMapper;

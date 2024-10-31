@@ -1,5 +1,4 @@
 ﻿using _2___Services._Exceptions;
-using _2___Services.Exceptions;
 using System.Net;
 using System.Text.Json;
 

@@ -1,17 +1,13 @@
 ﻿using _1___Entities;
-using _2___Services.Interfaces;
+using _2___Services._Interfaces;
 using _3___Repositories;
 using FluentValidation;
-using _2___Services._Interfaces;
 using _3___Mappers.Dtos.SaleDtos;
 using _3___Mappers.ManualMappers;
 using _3___Data.Models;
 using _4___API.FormValidators.SaleFormValidators;
-using _2___Services.Exceptions;
 using _2___Services.Services.SaleService;
 using _3___Validators.EntityValidators;
-using _2___Services.Services.BeerService;
-using _3___Mappers.Dtos.BeerDtos;
 
 namespace _4___API.Dependencies_and_Endpoints
 {

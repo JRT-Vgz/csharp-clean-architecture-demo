@@ -1,5 +1,4 @@
-﻿
-namespace _2___Services._Interfaces
+﻿namespace _2___Services._Interfaces
 {
     public interface IManualMapper<TDto, TEntity>
     {

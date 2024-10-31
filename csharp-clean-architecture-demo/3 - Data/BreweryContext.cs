@@ -1,6 +1,5 @@
 ﻿using _3___Data.Models;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.EntityFrameworkCore.Internal;
 
 namespace _3___Data
 {

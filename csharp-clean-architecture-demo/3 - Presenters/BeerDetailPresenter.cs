@@ -1,5 +1,5 @@
 ﻿using _1___Entities;
-using _2___Services.Interfaces;
+using _2___Services._Interfaces;
 using _3___Presenters.ViewModels;
 
 namespace _3___Presenters

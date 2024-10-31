@@ -1,5 +1,4 @@
-﻿using _3___Mappers.Dtos.BeerDtos;
-using _3___Mappers.Dtos.SaleDtos;
+﻿using _3___Mappers.Dtos.SaleDtos;
 using FluentValidation;
 
 namespace _4___API.FormValidators.SaleFormValidators

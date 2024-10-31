@@ -1,6 +1,3 @@
-
-using static System.Runtime.InteropServices.JavaScript.JSType;
-
 namespace _2___Services._Exceptions
 {
     public class EntityValidationException : Exception

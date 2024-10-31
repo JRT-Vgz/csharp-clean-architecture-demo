@@ -1,7 +1,7 @@
 
 using _1___Entities;
-using _2___Services.Exceptions;
-using _2___Services.Interfaces;
+using _2___Services._Exceptions;
+using _2___Services._Interfaces;
 using AutoMapper;
 
 namespace _2___Services.Services.SaleService

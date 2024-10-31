@@ -1,5 +1,4 @@
-
-namespace _2___Services.Exceptions
+namespace _2___Services._Exceptions
 {
     public class NotFoundException : Exception
     {

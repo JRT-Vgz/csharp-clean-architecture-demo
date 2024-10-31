@@ -1,4 +1,3 @@
-
 namespace _3___Presenters.ViewModels
 {
     public class BeerDetailViewModel

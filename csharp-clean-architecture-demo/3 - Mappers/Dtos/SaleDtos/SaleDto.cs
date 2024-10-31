@@ -1,6 +1,3 @@
-
-using _1___Entities;
-
 namespace _3___Mappers.Dtos.SaleDtos
 {
     public class SaleDto

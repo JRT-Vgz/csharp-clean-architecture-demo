@@ -1,5 +1,4 @@
-﻿using _2___Services._Exceptions;
-using System.Net;
+﻿using System.Net;
 using System.Text.Json;
 
 namespace _4___API.Middlewares

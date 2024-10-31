@@ -1,4 +1,3 @@
-
 namespace _3___Mappers.Dtos.SaleDtos
 {
     public class ConceptUpdateDto
