@@ -1,5 +1,6 @@
 
 using _1___Entities;
+using _2___Services.Exceptions;
 using _2___Services.Interfaces;
 using AutoMapper;
 
@@ -20,7 +21,7 @@ namespace _2___Services.Services.ConceptService
         {
             var conceptEntity = await _conceptRepository.GetByIdAsync(id);
 
-            if (conceptEntity == null) { throw new DirectoryNotFoundException($"No se encontró ningún concepto con ID {id}"); }
+            if (conceptEntity == null) { throw new NotFoundException($"No se encontró ningún concepto con ID {id}"); }
 
             return _mapper.Map<TDto>(conceptEntity);
         }

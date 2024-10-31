@@ -26,7 +26,7 @@ namespace _2___Services.Services.BrandService
         {
             var brandEntity = _mapper.Map<BrandEntity>(brandInsertDto);
 
-            var isValid = await _entityValidator.Validate(brandEntity);
+            var isValid = await _entityValidator.ValidateAsync(brandEntity);
             if (!isValid) { throw new EntityValidationException(_entityValidator.Errors); }           
 
             brandEntity = await _brandRepository.AddAsync(brandEntity);

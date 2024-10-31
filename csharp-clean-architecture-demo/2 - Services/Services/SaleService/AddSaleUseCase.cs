@@ -30,7 +30,7 @@ namespace _2___Services.Services.SaleService
         {
             var saleEntity = _manualMapper.Map(saleInsertDto);
 
-            var isEntityValid = await _entityValidator.Validate(saleEntity);
+            var isEntityValid = await _entityValidator.ValidateAsync(saleEntity);
             if (!isEntityValid) { throw new EntityValidationException(_entityValidator.Errors); }
 
             var insertedSaleEntity = await _saleRepository.AddAsync(saleEntity);

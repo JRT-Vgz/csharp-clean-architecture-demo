@@ -1,7 +1,32 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\Users\\Miguel\\Desktop\\csharp-clean-architecture-demo\\csharp-clean-architecture-demo\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{AF3046CA-F17B-45C2-965A-A0DF44579ECC}|2 - Services\\2 - Services.csproj|c:\\users\\miguel\\desktop\\csharp-clean-architecture-demo\\csharp-clean-architecture-demo\\2 - services\\services\\conceptservice\\getconceptbyidusecase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AF3046CA-F17B-45C2-965A-A0DF44579ECC}|2 - Services\\2 - Services.csproj|solutionrelative:2 - services\\services\\conceptservice\\getconceptbyidusecase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BE8E0F5D-5C96-4FF2-B337-7DA97DC58026}|4 - API\\4 - API.csproj|c:\\users\\miguel\\desktop\\csharp-clean-architecture-demo\\csharp-clean-architecture-demo\\4 - api\\dependencies and endpoints\\saleserviceendpoints.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BE8E0F5D-5C96-4FF2-B337-7DA97DC58026}|4 - API\\4 - API.csproj|solutionrelative:4 - api\\dependencies and endpoints\\saleserviceendpoints.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BE8E0F5D-5C96-4FF2-B337-7DA97DC58026}|4 - API\\4 - API.csproj|c:\\users\\miguel\\desktop\\csharp-clean-architecture-demo\\csharp-clean-architecture-demo\\4 - api\\dependencies and endpoints\\conceptserviceendpoints.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BE8E0F5D-5C96-4FF2-B337-7DA97DC58026}|4 - API\\4 - API.csproj|solutionrelative:4 - api\\dependencies and endpoints\\conceptserviceendpoints.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AF3046CA-F17B-45C2-965A-A0DF44579ECC}|2 - Services\\2 - Services.csproj|c:\\users\\miguel\\desktop\\csharp-clean-architecture-demo\\csharp-clean-architecture-demo\\2 - services\\services\\conceptservice\\addconcepttoidsaleusecase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AF3046CA-F17B-45C2-965A-A0DF44579ECC}|2 - Services\\2 - Services.csproj|solutionrelative:2 - services\\services\\conceptservice\\addconcepttoidsaleusecase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{95C439B9-21EB-408C-806D-6C5EE26EE278}|3 - Repositories\\3 - Repositories.csproj|c:\\users\\miguel\\desktop\\csharp-clean-architecture-demo\\csharp-clean-architecture-demo\\3 - repositories\\conceptrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{95C439B9-21EB-408C-806D-6C5EE26EE278}|3 - Repositories\\3 - Repositories.csproj|solutionrelative:3 - repositories\\conceptrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AF3046CA-F17B-45C2-965A-A0DF44579ECC}|2 - Services\\2 - Services.csproj|c:\\users\\miguel\\desktop\\csharp-clean-architecture-demo\\csharp-clean-architecture-demo\\2 - services\\services\\conceptservice\\updateconceptusecase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AF3046CA-F17B-45C2-965A-A0DF44579ECC}|2 - Services\\2 - Services.csproj|solutionrelative:2 - services\\services\\conceptservice\\updateconceptusecase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -9,11 +34,89 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": -1,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "GetConceptByIdUseCase.cs",
+              "DocumentMoniker": "C:\\Users\\Miguel\\Desktop\\csharp-clean-architecture-demo\\csharp-clean-architecture-demo\\2 - Services\\Services\\ConceptService\\GetConceptByIdUseCase.cs",
+              "RelativeDocumentMoniker": "2 - Services\\Services\\ConceptService\\GetConceptByIdUseCase.cs",
+              "ToolTip": "C:\\Users\\Miguel\\Desktop\\csharp-clean-architecture-demo\\csharp-clean-architecture-demo\\2 - Services\\Services\\ConceptService\\GetConceptByIdUseCase.cs",
+              "RelativeToolTip": "2 - Services\\Services\\ConceptService\\GetConceptByIdUseCase.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABQAAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-31T12:11:01.136Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "SaleServiceEndpoints.cs",
+              "DocumentMoniker": "C:\\Users\\Miguel\\Desktop\\csharp-clean-architecture-demo\\csharp-clean-architecture-demo\\4 - API\\Dependencies and Endpoints\\SaleServiceEndpoints.cs",
+              "RelativeDocumentMoniker": "4 - API\\Dependencies and Endpoints\\SaleServiceEndpoints.cs",
+              "ToolTip": "C:\\Users\\Miguel\\Desktop\\csharp-clean-architecture-demo\\csharp-clean-architecture-demo\\4 - API\\Dependencies and Endpoints\\SaleServiceEndpoints.cs",
+              "RelativeToolTip": "4 - API\\Dependencies and Endpoints\\SaleServiceEndpoints.cs",
+              "ViewState": "AQIAADwAAAAAAAAAAAAAAE4AAAAlAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-31T12:06:11.121Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "ConceptServiceEndpoints.cs",
+              "DocumentMoniker": "C:\\Users\\Miguel\\Desktop\\csharp-clean-architecture-demo\\csharp-clean-architecture-demo\\4 - API\\Dependencies and Endpoints\\ConceptServiceEndpoints.cs",
+              "RelativeDocumentMoniker": "4 - API\\Dependencies and Endpoints\\ConceptServiceEndpoints.cs",
+              "ToolTip": "C:\\Users\\Miguel\\Desktop\\csharp-clean-architecture-demo\\csharp-clean-architecture-demo\\4 - API\\Dependencies and Endpoints\\ConceptServiceEndpoints.cs",
+              "RelativeToolTip": "4 - API\\Dependencies and Endpoints\\ConceptServiceEndpoints.cs",
+              "ViewState": "AQIAADMAAAAAAAAAAAAAAD8AAAB0AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-31T12:04:26.906Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "AddConceptToIdSaleUseCase.cs",
+              "DocumentMoniker": "C:\\Users\\Miguel\\Desktop\\csharp-clean-architecture-demo\\csharp-clean-architecture-demo\\2 - Services\\Services\\ConceptService\\AddConceptToIdSaleUseCase.cs",
+              "RelativeDocumentMoniker": "2 - Services\\Services\\ConceptService\\AddConceptToIdSaleUseCase.cs",
+              "ToolTip": "C:\\Users\\Miguel\\Desktop\\csharp-clean-architecture-demo\\csharp-clean-architecture-demo\\2 - Services\\Services\\ConceptService\\AddConceptToIdSaleUseCase.cs",
+              "RelativeToolTip": "2 - Services\\Services\\ConceptService\\AddConceptToIdSaleUseCase.cs",
+              "ViewState": "AQIAABMAAAAAAAAAAAAQwCQAAABJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-31T10:25:32.386Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "ConceptRepository.cs",
+              "DocumentMoniker": "C:\\Users\\Miguel\\Desktop\\csharp-clean-architecture-demo\\csharp-clean-architecture-demo\\3 - Repositories\\ConceptRepository.cs",
+              "RelativeDocumentMoniker": "3 - Repositories\\ConceptRepository.cs",
+              "ToolTip": "C:\\Users\\Miguel\\Desktop\\csharp-clean-architecture-demo\\csharp-clean-architecture-demo\\3 - Repositories\\ConceptRepository.cs",
+              "RelativeToolTip": "3 - Repositories\\ConceptRepository.cs",
+              "ViewState": "AQIAABkAAAAAAAAAAAAAACAAAAAzAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-31T09:39:32.62Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "UpdateConceptUseCase.cs",
+              "DocumentMoniker": "C:\\Users\\Miguel\\Desktop\\csharp-clean-architecture-demo\\csharp-clean-architecture-demo\\2 - Services\\Services\\ConceptService\\UpdateConceptUseCase.cs",
+              "RelativeDocumentMoniker": "2 - Services\\Services\\ConceptService\\UpdateConceptUseCase.cs",
+              "ToolTip": "C:\\Users\\Miguel\\Desktop\\csharp-clean-architecture-demo\\csharp-clean-architecture-demo\\2 - Services\\Services\\ConceptService\\UpdateConceptUseCase.cs",
+              "RelativeToolTip": "2 - Services\\Services\\ConceptService\\UpdateConceptUseCase.cs",
+              "ViewState": "AQIAAAoAAAAAAAAAAAAAACUAAAAMAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-31T08:40:45.782Z",
+              "EditorCaption": ""
             }
           ]
         }

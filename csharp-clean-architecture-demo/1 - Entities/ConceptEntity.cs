@@ -4,7 +4,6 @@ namespace _1___Entities
     public class ConceptEntity
     {
         public int Id { get; set; }
-
         public int IdSale { get; set; }
         public int IdBeer { get; set; }
         public int Quantity { get; set; }

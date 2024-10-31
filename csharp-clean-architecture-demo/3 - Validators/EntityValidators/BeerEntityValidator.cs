@@ -16,7 +16,7 @@ namespace _3___Validators.EntityValidators
             _breweryContext = breweryContext;
         }
 
-        public async Task<bool> Validate(BeerEntity beerEntity)
+        public async Task<bool> ValidateAsync(BeerEntity beerEntity)
         {
             var beerModel = await _breweryContext.Beers.FirstOrDefaultAsync(b => b.Name == beerEntity.Name);
             if (beerModel != null && beerModel.Id != beerEntity.Id) { Errors.Add("Ya existe una cerveza con ese nombre."); }

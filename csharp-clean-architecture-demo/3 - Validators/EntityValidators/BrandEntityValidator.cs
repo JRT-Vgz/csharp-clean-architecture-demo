@@ -16,7 +16,7 @@ namespace _3___Validators.EntityValidators
             _breweryContext = breweryContext;
         }
 
-        public async Task<bool> Validate(BrandEntity brandEntity)
+        public async Task<bool> ValidateAsync(BrandEntity brandEntity)
         {
             var brandModel = await _breweryContext.Brands.FirstOrDefaultAsync(b => b.Name == brandEntity.Name);
             if (brandModel != null && brandModel.Id != brandEntity.Id) { Errors.Add("Ya existe una marca con ese nombre."); }

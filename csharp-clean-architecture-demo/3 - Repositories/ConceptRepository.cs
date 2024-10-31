@@ -37,14 +37,30 @@ namespace _3___Repositories
             return _mapper.Map<ConceptEntity>(conceptModel);
         }
 
-        public async Task<ConceptEntity> AddAsync(ConceptEntity entity)
+        public async Task<ConceptEntity> AddAsync(ConceptEntity conceptEntity)
         {
-            throw new NotImplementedException();
+            var conceptModel = _mapper.Map<ConceptModel>(conceptEntity);
+
+            await _breweryContext.AddAsync(conceptModel);
+            await _breweryContext.SaveChangesAsync();
+
+            return _mapper.Map<ConceptEntity>(conceptModel);
         }
 
-        public async Task<ConceptEntity> UpdateAsync(ConceptEntity entity, int id)
+        public async Task<ConceptEntity> UpdateAsync(ConceptEntity conceptEntity, int id)
         {
-            throw new NotImplementedException();
+            var conceptModel = await _breweryContext.Concepts.FindAsync(id);
+            if (conceptModel == null) { return null; }
+
+            conceptModel.IdBeer = conceptEntity.IdBeer;
+            conceptModel.Quantity = conceptEntity.Quantity;
+            conceptModel.UnitPrice = conceptEntity.UnitPrice;
+
+            _breweryContext.Concepts.Attach(conceptModel);
+            _breweryContext.Concepts.Entry(conceptModel).State = EntityState.Modified;
+            await _breweryContext.SaveChangesAsync();
+
+            return _mapper.Map<ConceptEntity>(conceptModel);
         }
 
         public async Task<ConceptEntity> DeleteAsync(int id)

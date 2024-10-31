@@ -7,7 +7,11 @@ using _3___Data.Models;
 using _3___Mappers.Dtos.BrandDtos;
 using _3___Mappers.Dtos.SaleDtos;
 using _3___Repositories;
+using _3___Validators.EntityValidators;
+using _4___API.FormValidators.BeerValidators;
+using _4___API.FormValidators.ConceptFormValidators;
 using AutoMapper;
+using FluentValidation;
 
 namespace _4___API.Dependencies_and_Endpoints
 {
@@ -19,10 +23,15 @@ namespace _4___API.Dependencies_and_Endpoints
             services.AddScoped<IRepository<SaleEntity>, SaleRepository>();
             services.AddScoped<IRepositorySearch<ConceptModel, ConceptEntity>, ConceptRepository>();
 
+            services.AddValidatorsFromAssemblyContaining<ConceptUpdateFormValidator>();
+            services.AddScoped<IEntityValidator<ConceptEntity>, ConceptEntityValidator>();
+
             services.AddScoped<GetAllConceptUseCase<ConceptDto>>();
             services.AddScoped<GetConceptByIdUseCase<ConceptDto>>();
             services.AddScoped<SearchAllConceptUseCase<ConceptModel, ConceptDto>>();
             services.AddScoped<DeleteConceptUseCase<ConceptDto>>();
+            services.AddScoped<UpdateConceptUseCase<ConceptUpdateDto, ConceptDto>>();
+            services.AddScoped<AddConceptToIdSaleUseCase<ConceptInsertToIdSaleDto, SaleDto>>();
         }
 
         public static void MapConceptServiceEndpoints(this WebApplication app)
@@ -49,6 +58,40 @@ namespace _4___API.Dependencies_and_Endpoints
                 return await conceptUseCase.ExecuteAsync(id);
             })
             .WithName("getConceptById")
+            .WithOpenApi();
+
+            // INSERT CONCEPT TO ID SALE
+            app.MapPost("concept/addto/{idSale}", async (AddConceptToIdSaleUseCase<ConceptInsertToIdSaleDto, SaleDto> conceptUseCase,
+                ConceptInsertToIdSaleDto conceptInsertToIdSaleDto, int idSale,
+                IValidator<ConceptInsertToIdSaleDto> formValidator) =>
+            {
+                var formValidationResult = formValidator.Validate(conceptInsertToIdSaleDto);
+                if (!formValidationResult.IsValid) { return Results.ValidationProblem(formValidationResult.ToDictionary()); }
+
+                if (conceptInsertToIdSaleDto.IdSale != idSale) { return Results.BadRequest($"El ID en el cuerpo de la solicitud ({conceptInsertToIdSaleDto.IdSale}) no coincide con el ID en la ruta ({idSale})."); }
+
+                var conceptDto = await conceptUseCase.ExecuteAsync(conceptInsertToIdSaleDto, idSale);
+
+                return Results.Ok(conceptDto);
+            })
+            .WithName("addConceptToIdSale")
+            .WithOpenApi();
+
+            // UPDATE CONCEPT
+            app.MapPut("/concept/{id}", async (UpdateConceptUseCase<ConceptUpdateDto, ConceptDto> conceptUseCase, 
+                ConceptUpdateDto conceptUpdateDto, int id,
+                IValidator<ConceptUpdateDto> formValidator) =>
+            {
+                var formValidationResult = formValidator.Validate(conceptUpdateDto);
+                if (!formValidationResult.IsValid) { return Results.ValidationProblem(formValidationResult.ToDictionary()); }
+
+                if (conceptUpdateDto.Id != id) { return Results.BadRequest($"El ID en el cuerpo de la solicitud ({conceptUpdateDto.Id}) no coincide con el ID en la ruta ({id})."); }
+
+                var conceptDto = await conceptUseCase.ExecuteAsync(conceptUpdateDto, id);
+
+                return Results.Ok(conceptDto);
+            })
+            .WithName("updateConcept")
             .WithOpenApi();
 
             // DELETE CONCEPT

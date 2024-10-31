@@ -14,6 +14,8 @@ namespace _3___Mappers.AutoMappers
             CreateMap<ConceptModel, ConceptEntity>();
             CreateMap<ConceptEntity, ConceptDto>()
                 .ForMember(dest => dest.IdConcept, map => map.MapFrom(org => org.Id));
+            CreateMap<ConceptUpdateDto, ConceptEntity>();
+            CreateMap<ConceptInsertToIdSaleDto, ConceptEntity>();
         }
     }
 }

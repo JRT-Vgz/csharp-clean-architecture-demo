@@ -76,7 +76,7 @@ namespace _4___API.Dependencies_and_Endpoints
             .WithOpenApi();
 
             // UPDATE SALE
-            app.MapPut("/sale/{id}", async (UpdateSaleUseCase saleUseCase, int id) =>
+            app.MapPut("/sale/{id}", (UpdateSaleUseCase saleUseCase, int id) =>
             {
                 saleUseCase.Execute();
             })

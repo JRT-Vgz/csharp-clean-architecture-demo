@@ -26,7 +26,7 @@ namespace _2___Services.Services.BeerService
         {
             var beerEntity = _mapper.Map<BeerEntity>(beerUpdateDto);
 
-            var isValid = await _entityValidator.Validate(beerEntity);
+            var isValid = await _entityValidator.ValidateAsync(beerEntity);
             if (!isValid) { throw new EntityValidationException(_entityValidator.Errors); }           
 
             var updatedBeerEntity = await _beerRepository.UpdateAsync(beerEntity, id);

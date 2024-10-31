@@ -16,7 +16,7 @@ namespace _3___Validators.EntityValidators
             _breweryContext = breweryContext;
         }
 
-        public async Task<bool> Validate(SaleEntity saleEntity)
+        public async Task<bool> ValidateAsync(SaleEntity saleEntity)
         {
             if (saleEntity.Concepts.Count == 0) { Errors.Add("Una venta debe tener conceptos.");}
 
