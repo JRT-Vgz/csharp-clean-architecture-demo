@@ -1,34 +1,10 @@
 # Carpeta de salida de compilación
-*bin/
-*obj/
+bin/
+obj/
 
 # Configuración de Visual Studio
-*/.vs/
-*.user
-*.suo
+.vs/
 
-# Paquetes NuGet
-packages/
-
-# Archivos de logs y temporales
-*.log
-*.tmp
-*.temp
-
-# Archivos de caché
-*.cache
-
-# Resultados de pruebas
-TestResults/
-*.trx
-
-# Archivos de configuración de Docker
-docker-compose.override.yml
-
-# Otros
-*.pdb
-*.dll
-*.exe
 **/obj/
 **/bin/
 **/.vs/
