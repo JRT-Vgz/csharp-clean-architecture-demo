@@ -7,3 +7,4 @@ Demonstration of CLEAN ARCHITECTURE scheme in a basic software for a brewery com
 - Entity Framework
 - FluentValidation
 - Automapper
+
