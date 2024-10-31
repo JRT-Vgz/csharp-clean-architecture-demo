@@ -1,0 +1,11 @@
+# Carpeta de salida de compilación
+bin/
+obj/
+
+# Configuración de Visual Studio
+.vs/
+
+**/obj/
+**/bin/
+**/.vs/
+#
