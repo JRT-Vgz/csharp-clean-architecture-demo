@@ -1,5 +1,6 @@
 Demonstration of CLEAN ARCHITECTURE scheme in a basic software for a brewery commerce.
 
+- SOLID + Clean Architecture
 - MySQL
 - Entity Framework
 - FluentValidation
