@@ -19,11 +19,15 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "3 - Mappers", "3 - Mappers\
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "3 - Validators", "3 - Validators\3 - Validators.csproj", "{FEA7BF8F-7519-4FB2-8842-D4E1E5AE189B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "3 -  Adapters", "3 -  Adapters\3 -  Adapters.csproj", "{C1BC0EB4-6A4E-4D12-A5C9-D48FD0C6465B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "3 -  Adapters", "3 -  Adapters\3 -  Adapters.csproj", "{C1BC0EB4-6A4E-4D12-A5C9-D48FD0C6465B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "4 - ExternalServices", "4 - ExternalServices\4 - ExternalServices.csproj", "{67F78848-67A9-4968-8A77-FAF60F9D50BF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "4 - ExternalServices", "4 - ExternalServices\4 - ExternalServices.csproj", "{67F78848-67A9-4968-8A77-FAF60F9D50BF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "4 - Console", "4 - Console\4 - Console.csproj", "{B08AA3A9-3927-43CE-A33E-57E440305C4D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "4 - Console", "4 - Console\4 - Console.csproj", "{B08AA3A9-3927-43CE-A33E-57E440305C4D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "UnitTests", "UnitTests", "{B2E9BD39-F35E-453D-8EAC-1D24A92A7353}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Services.Tests", "Services.Tests\Services.Tests.csproj", "{60CFEBEB-F78D-4DD8-95F1-D566BEAF915B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -75,9 +79,16 @@ Global
 		{B08AA3A9-3927-43CE-A33E-57E440305C4D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B08AA3A9-3927-43CE-A33E-57E440305C4D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B08AA3A9-3927-43CE-A33E-57E440305C4D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{60CFEBEB-F78D-4DD8-95F1-D566BEAF915B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{60CFEBEB-F78D-4DD8-95F1-D566BEAF915B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{60CFEBEB-F78D-4DD8-95F1-D566BEAF915B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{60CFEBEB-F78D-4DD8-95F1-D566BEAF915B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{60CFEBEB-F78D-4DD8-95F1-D566BEAF915B} = {B2E9BD39-F35E-453D-8EAC-1D24A92A7353}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {A8D9F70C-A200-43C6-BE5D-DC23E2E1E737}
