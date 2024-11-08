@@ -11,7 +11,12 @@ namespace _1___Entities
         public decimal ConceptPrice { get; set; }
 
         public ConceptEntity(int idBeer, int quantity, decimal unitPrice) 
-        { 
+        {
+            if (quantity <= 0)
+                throw new ArgumentException("La cantidad debe ser superior a 0.");
+            if (unitPrice <= 0)
+                throw new ArgumentException("El precio unitario debe ser superior a 0.");
+
             IdBeer = idBeer;
             Quantity = quantity;
             UnitPrice = unitPrice;
@@ -20,6 +25,11 @@ namespace _1___Entities
 
         public ConceptEntity(int id, int idBeer, int quantity, decimal unitPrice)
         {
+            if (quantity <= 0)
+                throw new ArgumentException("La cantidad debe ser superior a 0.");
+            if (unitPrice <= 0)
+                throw new ArgumentException("El precio unitario debe ser superior a 0.");
+
             Id = id;
             IdBeer = idBeer;
             Quantity = quantity;
