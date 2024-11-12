@@ -12,12 +12,12 @@ namespace _2___Services.Tests.BrandServiceTests
     {
         private readonly Mock<IRepository<BrandEntity>> _brandRepositoryMock;
         private readonly Mock<IMapper> _mapperMock;
-        private readonly GetAllBrandUseCase<BrandDto> _getAllBrandService;
+        private readonly GetAllBrandUseCase<BrandDto> _getAllBrandUseCase;
         public GetAllBrandTest()
         {
             _brandRepositoryMock = new Mock<IRepository<BrandEntity>>();
             _mapperMock = new Mock<IMapper>();
-            _getAllBrandService = new GetAllBrandUseCase<BrandDto>(_brandRepositoryMock.Object, _mapperMock.Object);
+            _getAllBrandUseCase = new GetAllBrandUseCase<BrandDto>(_brandRepositoryMock.Object, _mapperMock.Object);
         }
 
         private List<BrandEntity> CreateTestEntities()
@@ -51,12 +51,14 @@ namespace _2___Services.Tests.BrandServiceTests
                 Name = entity.Name
             });
             
-            var actual = await _getAllBrandService.ExecuteAsync();
+            var actual = await _getAllBrandUseCase.ExecuteAsync();
             var actualList = actual.ToList();
 
             Assert.Equal(expectedDtos.Count, actualList.Count);
             for (int i = 0; i < expectedDtos.Count; i++)
             {
+                Assert.NotNull(actualList[i]);
+                Assert.IsType<BrandDto>(actualList[i]);
                 Assert.Equal(expectedDtos[i].Id, actualList[i].Id);
                 Assert.Equal(expectedDtos[i].Name, actualList[i].Name);
             }

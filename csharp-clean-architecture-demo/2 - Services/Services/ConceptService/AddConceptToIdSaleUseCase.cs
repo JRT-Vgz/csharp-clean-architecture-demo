@@ -6,7 +6,7 @@ using AutoMapper;
 
 namespace _2___Services.Services.ConceptService
 {
-    public class AddConceptToIdSaleUseCase<TInsertDto, TDto>
+    public class AddConceptToIdSaleUseCase<TInsertToIdDto, TSaleDto>
     {
         private readonly IRepository<ConceptEntity> _conceptRepository;
         private readonly IRepository<SaleEntity> _saleRepository;
@@ -23,7 +23,7 @@ namespace _2___Services.Services.ConceptService
             _entityValidator = entityValidator;
         }
 
-        public async Task<TDto> ExecuteAsync(TInsertDto conceptInsertToIdSaleDto, int idSale)
+        public async Task<TSaleDto> ExecuteAsync(TInsertToIdDto conceptInsertToIdSaleDto, int idSale)
         {
             var conceptEntity = _mapper.Map<ConceptEntity>(conceptInsertToIdSaleDto);
 
@@ -37,7 +37,7 @@ namespace _2___Services.Services.ConceptService
             var saleEntity = await _saleRepository.GetByIdAsync(insertedConceptEntity.IdSale);
             await _saleRepository.UpdateAsync(saleEntity, insertedConceptEntity.IdSale);
 
-            return _mapper.Map<TDto>(saleEntity);
+            return _mapper.Map<TSaleDto>(saleEntity);
         }
     }
 }
