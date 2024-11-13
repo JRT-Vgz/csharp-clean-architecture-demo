@@ -3,9 +3,9 @@ using _2___Services._Interfaces;
 using FluentValidation;
 using _3____Adapters.Interfaces;
 using _4___ExternalServices;
-using _3____Adapters.Dtos;
 using _3____Adapters;
 using _2___Services.Services.PostService;
+using _3___Mappers.Dtos.AdaptersDtos;
 
 namespace _4___API.Dependencies_and_Endpoints
 {

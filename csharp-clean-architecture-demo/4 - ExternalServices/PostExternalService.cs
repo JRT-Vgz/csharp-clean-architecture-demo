@@ -1,6 +1,6 @@
 
-using _3____Adapters.Dtos;
 using _3____Adapters.Interfaces;
+using _3___Mappers.Dtos.AdaptersDtos;
 using System.Text.Json;
 
 namespace _4___ExternalServices

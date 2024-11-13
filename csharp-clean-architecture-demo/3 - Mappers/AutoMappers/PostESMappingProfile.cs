@@ -1,5 +1,5 @@
 using _1___Entities;
-using _3____Adapters.Dtos;
+using _3___Mappers.Dtos.AdaptersDtos;
 using AutoMapper;
 
 namespace _3___Mappers.AutoMappers

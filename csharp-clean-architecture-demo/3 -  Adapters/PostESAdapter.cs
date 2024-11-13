@@ -1,8 +1,8 @@
 
 using _1___Entities;
 using _2___Services._Interfaces;
-using _3____Adapters.Dtos;
 using _3____Adapters.Interfaces;
+using _3___Mappers.Dtos.AdaptersDtos;
 using AutoMapper;
 
 namespace _3____Adapters

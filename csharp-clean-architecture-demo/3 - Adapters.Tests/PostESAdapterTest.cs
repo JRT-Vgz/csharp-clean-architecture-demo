@@ -1,9 +1,8 @@
 
 using _1___Entities;
 using _3____Adapters;
-using _3____Adapters.Dtos;
 using _3____Adapters.Interfaces;
-using _3___Mappers.AutoMappers;
+using _3___Mappers.Dtos.AdaptersDtos;
 using AutoMapper;
 using Moq;
 
