@@ -6,11 +6,11 @@ namespace _3___Data
     public class BreweryContext : DbContext
     {
         public BreweryContext(DbContextOptions<BreweryContext> options) : base(options) { }
-
-        public DbSet<BeerModel> Beers { get; set; }
-        public DbSet<BrandModel> Brands { get; set; }
-        public DbSet<SaleModel> Sales { get; set; }
-        public DbSet<ConceptModel> Concepts { get; set; }
+        public BreweryContext(){ }
+        public virtual DbSet<BeerModel> Beers { get; set; }
+        public virtual DbSet<BrandModel> Brands { get; set; }
+        public virtual DbSet<SaleModel> Sales { get; set; }
+        public virtual DbSet<ConceptModel> Concepts { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
