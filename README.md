@@ -5,8 +5,9 @@ Demonstration of CLEAN ARCHITECTURE scheme in a basic software for a brewery com
 - Entity Framework
 - FluentValidation
 - Automapper
-- API and console output.
-- Use of external services.
-- Functional and Imperative Programming.
+- API and console output
+- Use of external services
+- Functional and Imperative Programming
 - Unit Tests with xUnit
+- Coverlet & Report Generator
 
