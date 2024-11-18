@@ -1,6 +1,5 @@
 
 using _1___Entities;
-using _3___Data.Models;
 using _3___Mappers.AutoMappers;
 using _3___Mappers.Dtos.SaleDtos;
 using AutoMapper;

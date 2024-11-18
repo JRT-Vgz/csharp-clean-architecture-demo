@@ -1,15 +1,11 @@
 
 using _1___Entities;
-using _2___Services._Interfaces;
 using _3___Data;
 using _3___Data.Models;
 using AutoMapper;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.EntityFrameworkCore.ChangeTracking;
 using Moq;
 using Moq.EntityFrameworkCore;
-using System.Net.Sockets;
-using System.Runtime.CompilerServices;
 
 namespace _3___Repositories.Tests
 {

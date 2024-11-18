@@ -3,9 +3,7 @@ using _1___Entities;
 using _2___Services._Exceptions;
 using _2___Services._Interfaces;
 using _2___Services.Services.BeerService;
-using _3___Mappers.Dtos.BeerDtos;
 using _3___Presenters.ViewModels;
-using AutoMapper;
 using Moq;
 
 namespace _2___Services.Tests.BeerServiceTests

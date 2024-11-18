@@ -2,8 +2,6 @@ using _1___Entities;
 using _2___Services._Interfaces;
 using _3___Data;
 using Microsoft.EntityFrameworkCore;
-using System;
-
 namespace _3___Validators.EntityValidators
 {
     public class ConceptEntityValidator : IEntityValidator<ConceptEntity>
