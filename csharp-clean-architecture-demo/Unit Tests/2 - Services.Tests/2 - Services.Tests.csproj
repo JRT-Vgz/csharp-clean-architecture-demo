@@ -13,6 +13,7 @@
 	<PropertyGroup>
 		<IsPackable>false</IsPackable>
 		<CollectCoverage>true</CollectCoverage>
+		<CoverletOutput>./TestResults/</CoverletOutput>
 		<CoverletOutputFormat>cobertura</CoverletOutputFormat>
 	</PropertyGroup>
 	

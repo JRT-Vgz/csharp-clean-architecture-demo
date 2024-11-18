@@ -45,6 +45,7 @@ namespace _3___Adapters.Tests
             _mapperMock.Verify(m => m.Map<PostEntity>(It.IsAny<PostESDto>()), Times.Exactly(3));
         }
 
+        [Fact]
         public async Task ReturnPostEntityById_Correctly()
         {
             _externalServiceMock.Setup(s => s.GetContentByIdAsync(It.IsAny<int>())).ReturnsAsync(new PostESDto());
