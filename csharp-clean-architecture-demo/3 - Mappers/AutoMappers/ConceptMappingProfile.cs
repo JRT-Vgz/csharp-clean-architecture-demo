@@ -9,12 +9,22 @@ namespace _3___Mappers.AutoMappers
     {
         public ConceptMappingProfile()
         {
-            CreateMap<ConceptEntity, ConceptModel>();
-            CreateMap<ConceptModel, ConceptEntity>();
+            CreateMap<ConceptEntity, ConceptModel>()
+                .ForMember(dest => dest.Sale, map => map.Ignore());
+
+            CreateMap<ConceptModel, ConceptEntity>()
+                .ForMember(dest => dest.ConceptPrice, map => map.Ignore());
+
             CreateMap<ConceptEntity, ConceptDto>()
                 .ForMember(dest => dest.IdConcept, map => map.MapFrom(org => org.Id));
-            CreateMap<ConceptUpdateDto, ConceptEntity>();
-            CreateMap<ConceptInsertToIdSaleDto, ConceptEntity>();
+
+            CreateMap<ConceptUpdateDto, ConceptEntity>()
+                .ForMember(dest => dest.IdSale, map => map.Ignore())
+                .ForMember(dest => dest.ConceptPrice, map => map.Ignore());
+
+            CreateMap<ConceptInsertToIdSaleDto, ConceptEntity>()
+                .ForMember(dest => dest.Id, map => map.Ignore())
+                .ForMember(dest => dest.ConceptPrice, map => map.Ignore());
         }
     }
 }

@@ -45,6 +45,10 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "4 - ExternalServices.Tests"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "4 - API.Tests", "Unit Tests\4 - API.Tests\4 - API.Tests.csproj", "{1A3B97D9-E721-43C2-B92E-6A17C6784BCE}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "IntegrationTests", "IntegrationTests", "{8DA5D49A-C4DC-4D5F-88B2-3F591445BED5}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BeerServiceEndpoint.Tests", "Integration Tests\BeerServiceEndpoint.Tests\BeerServiceEndpoint.Tests.csproj", "{61F4826B-A472-40F2-B91E-ED9581AA0293}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -131,6 +135,10 @@ Global
 		{1A3B97D9-E721-43C2-B92E-6A17C6784BCE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1A3B97D9-E721-43C2-B92E-6A17C6784BCE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1A3B97D9-E721-43C2-B92E-6A17C6784BCE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{61F4826B-A472-40F2-B91E-ED9581AA0293}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{61F4826B-A472-40F2-B91E-ED9581AA0293}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{61F4826B-A472-40F2-B91E-ED9581AA0293}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{61F4826B-A472-40F2-B91E-ED9581AA0293}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -145,6 +153,7 @@ Global
 		{37091751-196E-4FBB-9EFE-E2CABD4EE94E} = {B2E9BD39-F35E-453D-8EAC-1D24A92A7353}
 		{3AE09551-D285-458F-BB38-B824AEAED0E4} = {B2E9BD39-F35E-453D-8EAC-1D24A92A7353}
 		{1A3B97D9-E721-43C2-B92E-6A17C6784BCE} = {B2E9BD39-F35E-453D-8EAC-1D24A92A7353}
+		{61F4826B-A472-40F2-B91E-ED9581AA0293} = {8DA5D49A-C4DC-4D5F-88B2-3F591445BED5}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {A8D9F70C-A200-43C6-BE5D-DC23E2E1E737}

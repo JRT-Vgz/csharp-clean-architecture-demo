@@ -8,13 +8,19 @@ namespace _3___Mappers.Tests.AutoMappers.Tests
 {
     public class ConceptMappingProfileTest
     {
+        private readonly IConfigurationProvider _configuration;
         private readonly IMapper _mapper;
 
         public ConceptMappingProfileTest()
         {
-            var config = new MapperConfiguration(cfg => cfg.AddProfile<ConceptMappingProfile>());
-            _mapper = config.CreateMapper();
+            _configuration = new MapperConfiguration(cfg => cfg.AddProfile<ConceptMappingProfile>());
+            _mapper = _configuration.CreateMapper();
         }
+
+        [Fact]
+        public void ShouldBeValidConfiguration()
+            => _configuration.AssertConfigurationIsValid();
+
 
         [Fact]
         public void MapConceptEntity_ToConceptDto_Correctly()

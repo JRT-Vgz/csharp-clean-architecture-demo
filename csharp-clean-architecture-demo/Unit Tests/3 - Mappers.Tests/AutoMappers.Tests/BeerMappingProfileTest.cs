@@ -4,17 +4,38 @@ using _3___Data.Models;
 using _3___Mappers.AutoMappers;
 using _3___Mappers.Dtos.BeerDtos;
 using AutoMapper;
+using System.Runtime.Serialization;
 
 namespace _3___Mappers.Tests.AutoMappers.Tests
 {
     public class BeerMappingProfileTest
     {
+        private readonly IConfigurationProvider _configuration;
         private readonly IMapper _mapper;
 
         public BeerMappingProfileTest()
         {
-            var config = new MapperConfiguration(cfg => cfg.AddProfile<BeerMappingProfile>());
-            _mapper = config.CreateMapper();
+            _configuration = new MapperConfiguration(cfg => cfg.AddProfile<BeerMappingProfile>());
+            _mapper = _configuration.CreateMapper();
+        }
+
+        // Prueba de configuración
+        [Fact]
+        public void ShouldBeValidConfiguration()
+            => _configuration.AssertConfigurationIsValid();
+
+        // Prueba la existencia de los mapeos, no el contenido.
+        [Theory]
+        [InlineData(typeof(BeerInsertDto), typeof(BeerEntity))]
+        [InlineData(typeof(BeerUpdateDto), typeof(BeerEntity))]
+        [InlineData(typeof(BeerEntity), typeof(BeerDto))]
+        [InlineData(typeof(BeerModel), typeof(BeerEntity))]
+        [InlineData(typeof(BeerEntity), typeof(BeerModel))]
+        public void Map_OriginToDestination_ExistConfiguration(Type origin, Type destination)
+        {
+            var instance = FormatterServices.GetUninitializedObject(origin);
+
+            _mapper.Map(instance, origin, destination);
         }
 
         [Fact]

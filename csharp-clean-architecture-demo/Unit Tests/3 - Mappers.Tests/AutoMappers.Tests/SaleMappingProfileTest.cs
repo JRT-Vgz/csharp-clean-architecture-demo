@@ -8,17 +8,22 @@ namespace _3___Mappers.Tests.AutoMappers.Tests
 {
     public class SaleMappingProfileTest
     {
+        private readonly IConfigurationProvider _configuration;
         private readonly IMapper _mapper;
 
         public SaleMappingProfileTest()
         {
-            var config = new MapperConfiguration(cfg =>
+            _configuration = new MapperConfiguration(cfg =>
             {
                 cfg.AddProfile<SaleMappingProfile>();
                 cfg.AddProfile<ConceptMappingProfile>();
             });
-            _mapper = config.CreateMapper();
+            _mapper = _configuration.CreateMapper();
         }
+
+        [Fact]
+        public void ShouldBeValidConfiguration()
+            => _configuration.AssertConfigurationIsValid();
 
         private SaleEntity CreateTestSaleEntity()
         {
