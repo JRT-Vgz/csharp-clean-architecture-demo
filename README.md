@@ -1,4 +1,4 @@
-Demonstration of CLEAN ARCHITECTURE scheme in a basic software for a brewery commerce.
+Demonstration of CLEAN ARCHITECTURE scheme in a basic backend for a brewery commerce.
 
 - SOLID + Clean Architecture
 - MySQL
